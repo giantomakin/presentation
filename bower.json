@@ -18,6 +18,7 @@
   "dependencies": {
     "fullpage.js": "^2.9.2",
     "jquery-easing": "*",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "threesixty-slider": "^2.0.5"
   }
 }
