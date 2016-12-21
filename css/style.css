@@ -8,7 +8,7 @@ html,
 body {
     height: 100%;
     background-color: #f8f8f8;
-    padding: 50px 0; 
+    padding: 50px 0;
 }
 
 
@@ -84,10 +84,10 @@ footer {
 }
 .right-section h2 {
     text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
     font-size: 34px;
     text-align: center;
-    letter-spacing: 2px;
 }
 .right-section h3 {
     font-weight: 200;
@@ -120,7 +120,7 @@ footer {
 }
 .navbar-nav > li > a {
     font-size: 18px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed Regular', sans-serif;
 }
 .glyphicon-triangle-bottom {
     width: 100%;
@@ -135,4 +135,3 @@ footer {
 .makeVisible {
     visibility: visible;
 }
-
