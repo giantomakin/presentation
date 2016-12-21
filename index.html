@@ -36,27 +36,27 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <span class="glyphicon glyphicon-triangle-bottom"></span>
-                        <a href="#">STATIC PICTURE</a>
+                        <a class="nav-a" id="a1" href="#">STATIC PICTURE</a>
                     </li>
                     <li>
                         <span class="glyphicon glyphicon-triangle-bottom"></span>
-                        <a href="#">PRODUCT RENDER</a>
+                        <a class="nav-a" id="a2" href="#">PRODUCT RENDER</a>
                     </li>
                     <li>
                         <span class="glyphicon glyphicon-triangle-bottom"></span>
-                        <a href="#">360° PHOTOGRAPHY</a>
+                        <a class="nav-a" id="a3" href="#">360° PHOTOGRAPHY</a>
                     </li>
                     <li>
                         <span class="glyphicon glyphicon-triangle-bottom"></span>
-                        <a href="#">PRODUCT VISUALIZATION</a>
+                        <a class="nav-a" id="a4" href="#">PRODUCT VISUALIZATION</a>
                     </li>
                     <li>
                         <span class="glyphicon glyphicon-triangle-bottom"></span>
-                        <a href="#">PLACEMENT IN HOUSE TIPSTER'S VIRTUAL ROOM</a>
+                        <a class="nav-a" id="a5" href="#">PLACEMENT IN HOUSE TIPSTER'S VIRTUAL ROOM</a>
                     </li>
                     <li>
                         <span class="glyphicon glyphicon-triangle-bottom"></span>
-                        <a href="#">PARTNERED CONTENT</a>
+                        <a class="nav-a" id="a6" href="#">PARTNERED CONTENT</a>
                     </li>
 
                 </ul>
@@ -83,7 +83,7 @@
 	            <div class="col-sm-8 left-section">
                     <h3>Left Section</h3>
                 </div>
-                <div class="col-sm-4 right-section">    
+                <div class="col-sm-4 right-section">
                     <div>
                         <h2>Static Picture</h2>
                         <h3>A professional studio-grade photo of your product to display in House Tipster’s marketplace. Requires shipping of product(s) to our location.</h3>
@@ -193,11 +193,39 @@
     $item.addClass('full-screen');
 
     myNav.find('li > a').click(function() {
+      var id = $(this).attr('id');
       var newIndex = $(this).parent().index();
       myCarousel.carousel( newIndex );
 
-      $(this).toggleClass("itemSelected");
-      $(".glyphicon-triangle-bottom").toggleClass("makeVisible");
+      $(".nav-a").removeClass("itemSelected");
+      $(".nav-a").prev().removeClass("makeVisible");
+
+      switch(id){
+      	case "a1":
+      		$("#a1").addClass("itemSelected");
+      		$("#a1").prev().addClass("makeVisible");
+      	break;
+      	case "a2":
+      		$("#a2").addClass("itemSelected");
+      		$("#a2").prev().addClass("makeVisible");
+      	break;
+      	case "a3":
+      		$("#a3").addClass("itemSelected");
+      		$("#a3").prev().addClass("makeVisible");
+      	break;
+      	case "a4":
+      		$("#a4").addClass("itemSelected");
+      		$("#a4").prev().addClass("makeVisible");
+      	break;
+      	case "a5":
+      		$("#a5").addClass("itemSelected");
+      		$("#a5").prev().addClass("makeVisible");
+      	break;
+      	case "a6":
+      		$("#a6").addClass("itemSelected");
+      		$("#a6").prev().addClass("makeVisible");
+      	break;
+      }
 
     });
 
