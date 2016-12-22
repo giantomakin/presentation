@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="presentationApp">
 
 <head>
 
@@ -79,88 +79,29 @@
 	  <div class="carousel-inner" role="listbox">
 	    <div class="item">
 	        <!-- <img src="https://unsplash.it/2000/1250?image=397" data-color="lightblue" alt="First Image"> -->
-	        <div class="carousel-caption">
-	            <div class="col-sm-8 left-section">
-                    <h3>Left Section</h3>
-                    Carousel Goes here
-                </div>
-                <div class="col-sm-4 right-section">
-                    <div>
-                        <h2>Static Picture</h2>
-                        <h3>A professional studio-grade photo of your product to display in House Tipster’s marketplace. Requires shipping of product(s) to our location.</h3>
-                    </div>
-                </div>
-	        </div>
+
+			<div class="carousel-caption row" ng-include="'pages/static-picture.html'"></div>
+
 	    </div>
 	    <div class="item">
 	        <!-- <img src="https://unsplash.it/2000/1250?image=689" data-color="firebrick" alt="Second Image"> -->
-	        <div class="carousel-caption">
-                <div class="col-sm-8 left-section">
-                    <h3>Left Section</h3>
-                </div>
-                <div class="col-sm-4 right-section">
-                    <div>
-                        <h2>Product Render</h2>
-                        <h3>A stunning render produced with a premier 3D scanner, which is able to display various colors options of the same product from just one scan. This 3D visualization is the recommended choice for multi-finish products.</h3>
-                    </div>
-                </div>
-            </div>
+	        <div class="carousel-caption row" ng-include="'pages/product-render.html'"></div>
 	    </div>
 	    <div class="item">
 	        <!-- <img src="https://unsplash.it/2000/1250?image=675" data-color="violet" alt="Third Image"> -->
-	        <div class="carousel-caption">
-                <div class="col-sm-8 left-section">
-                    <h3>Left Section</h3>
-                </div>
-                <div class="col-sm-4 right-section">
-                    <div>
-                        <h2>360&deg; Photography</h2>
-                        <h3>360&deg; photography allows users to examine an object by rotating and tilting the object to provide a full 360° view. This is perfect for couches, tables, and other home good that would be placed in the center of a room. Recommended for products that have one specific color.</h3>
-                    </div>
-                </div>
-            </div>
+	        <div class="carousel-caption row" ng-include="'pages/threesixty-photography.html'"></div>
 	    </div>
 	    <div class="item">
 	        <!-- <img src="https://unsplash.it/2000/1250?image=658" data-color="lightgreen" alt="Fourth Image"> -->
-	        <div class="carousel-caption">
-                <div class="col-sm-8 left-section">
-                    <h3>Left Section</h3>
-                </div>
-                <div class="col-sm-4 right-section">
-                    <div>
-                        <h2>Product Visualization</h2>
-                        <h3>360&deg; product visualizations are the most captivating way to showcase any product. These photorealistic renders feature every angle of an item with options to rotate the product and change patterns, colors, and textures.</h3>
-                    </div>
-                </div>
-            </div>
+	        <div class="carousel-caption row" ng-include="'pages/product-visualization.html'"></div>
 	    </div>
 	    <div class="item">
 	        <!-- <img src="https://unsplash.it/2000/1250?image=638" data-color="tomato" alt="Fifth Image"> -->
-	        <div class="carousel-caption">
-                <div class="col-sm-8 left-section">
-                    <h3>Left Section</h3>
-                </div>
-                <div class="col-sm-4 right-section">
-                    <div>
-                        <h2>Placement in House Tipster’s Virtual Rooms</h2>
-                        <h3>This our signature feature Once a product is rendered as a complete product visualization, it is eligible for placement in House Tipster’s interactive Virtual Rooms, where homeowners create custom interior designs and wishlists of their favorite items.</h3>
-                    </div>
-                </div>
-            </div>
+	        <div class="carousel-caption row" ng-include="'pages/virtual-room.html'"></div>>
 	    </div>
 	    <div class="item">
 	        <!-- <img src="https://unsplash.it/2000/1250?image=638" data-color="tomato" alt="Fifth Image"> -->
-	        <div class="carousel-caption">
-                <div class="col-sm-8 left-section">
-                    <h3>Left Section</h3>
-                </div>
-                <div class="col-sm-4 right-section">
-                    <div>
-                        <h2>Partnered Content</h2>
-                        <h3>Get even more exposure with a sponsored article or video about your product. Our team of writers and videographers will work you with to create engaging online content that highlights the unique features of your item.</h3>
-                    </div>
-                </div>
-            </div>
+	        <div class="carousel-caption row" ng-include="'pages/partnered-content.html'"></div>>
 	    </div>
 	  </div>
 
@@ -182,83 +123,11 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- Script to Activate the Carousel -->
-    <script>
-    var $item = $('.carousel .item');
-    var $wHeight = $(window).height();
-    var myCarousel = $('#mycarousel');
-    var myNav = myCarousel.prev();
+    <!-- AngularJS Core JavaScript -->
+    <script src="bower_components/angular/angular.min.js"></script>
 
-    $item.eq(0).addClass('active');
-    $item.height($wHeight);
-    $item.addClass('full-screen');
-
-    myNav.find('li > a').click(function() {
-      var id = $(this).attr('id');
-      var newIndex = $(this).parent().index();
-      myCarousel.carousel( newIndex );
-
-      $(".nav-a").removeClass("itemSelected");
-      $(".nav-a").prev().removeClass("makeVisible");
-
-      switch(id){
-      	case "a1":
-      		$("#a1").addClass("itemSelected");
-      		$("#a1").prev().addClass("makeVisible");
-      	break;
-      	case "a2":
-      		$("#a2").addClass("itemSelected");
-      		$("#a2").prev().addClass("makeVisible");
-      	break;
-      	case "a3":
-      		$("#a3").addClass("itemSelected");
-      		$("#a3").prev().addClass("makeVisible");
-      	break;
-      	case "a4":
-      		$("#a4").addClass("itemSelected");
-      		$("#a4").prev().addClass("makeVisible");
-      	break;
-      	case "a5":
-      		$("#a5").addClass("itemSelected");
-      		$("#a5").prev().addClass("makeVisible");
-      	break;
-      	case "a6":
-      		$("#a6").addClass("itemSelected");
-      		$("#a6").prev().addClass("makeVisible");
-      	break;
-      }
-
-    });
-
-
-    // $("item").hasClass("active") {
-    //     $(".navbar-nav > li > a").toggle(background-color: "#e97925");
-    // }
-
-    // $('.carousel img').each(function() {
-    //   var $src = $(this).attr('src');
-    //   var $color = $(this).attr('data-color');
-    //   $(this).parent().css({
-    //     'background-image' : 'url(' + $src + ')',
-    //     'background-color' : $color,
-    //     // 'background-size' : 'cover',
-    //     'height' : '100%',
-    //     'width' : '100%',
-    //     'background-repeat' : 'no-repeat'
-    //   });
-    //   $(this).remove();
-    // });
-
-    $(window).on('resize', function (){
-      $wHeight = $(window).height();
-      $item.height($wHeight);
-    });
-
-    // $('.carousel').carousel({
-    //   interval: 6000,
-    //   pause: "false"
-    // });
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="js/app.js"></script>
 
 </body>
 
