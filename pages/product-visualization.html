@@ -1,5 +1,13 @@
 <div class="col-sm-8 left-section">
-    <h3>Left Section</h3>
+
+<div class="threesixty product">
+    <div class="spinner">
+        <span>0%</span>
+    </div>
+    <ol class="threesixty_images" style="text-align: justify;"></ol>
+</div>
+
+
 </div>
 <div class="col-sm-4 right-section">
     <div>
@@ -7,3 +15,24 @@
         <h3>360&deg; product visualizations are the most captivating way to showcase any product. These photorealistic renders feature every angle of an item with options to rotate the product and change patterns, colors, and textures.</h3>
     </div>
 </div>
+
+<script>
+$(document).ready(function(){
+	$('.product').ThreeSixty({
+	      totalFrames: 17, // Total no. of image you have for 360 slider
+	      endFrame: 17, // end frame for the auto spin animation
+	      currentFrame: 1, // This the start frame for auto spin
+	      imgList: '.threesixty_images', // selector for image list
+	      progress: '.spinner', // selector to show the loading progress
+	      imagePath: 'assets/product/', // path of the image assets
+	      filePrefix: '', // file prefix if any
+	      ext: '.jpg', // extention for the assets
+	      height: 1000,
+	      width: 447,
+	      navigation: true,
+	      responsive: true
+	  });
+
+});
+</script>
+

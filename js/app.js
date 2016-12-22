@@ -1,4 +1,5 @@
 var app = angular.module('presentationApp', []);
+
 var $item = $('.carousel .item');
 var $wHeight = $(window).height();
 var myCarousel = $('#mycarousel');
@@ -7,6 +8,13 @@ var myNav = myCarousel.prev();
 $item.eq(0).addClass('active');
 $item.height($wHeight);
 $item.addClass('full-screen');
+$("#a1").addClass("itemSelected");
+$("#a1").prev().addClass("makeVisible");
+
+$(window).on('resize', function (){
+  $wHeight = $(window).height();
+  $item.height($wHeight);
+});
 
 myNav.find('li > a').click(function() {
   var id = $(this).attr('id');
@@ -46,28 +54,8 @@ myNav.find('li > a').click(function() {
 });
 
 
-// $("item").hasClass("active") {
-//     $(".navbar-nav > li > a").toggle(background-color: "#e97925");
-// }
 
-// $('.carousel img').each(function() {
-//   var $src = $(this).attr('src');
-//   var $color = $(this).attr('data-color');
-//   $(this).parent().css({
-//     'background-image' : 'url(' + $src + ')',
-//     'background-color' : $color,
-//     // 'background-size' : 'cover',
-//     'height' : '100%',
-//     'width' : '100%',
-//     'background-repeat' : 'no-repeat'
-//   });
-//   $(this).remove();
-// });
 
-$(window).on('resize', function (){
-  $wHeight = $(window).height();
-  $item.height($wHeight);
-});
 
 // $('.carousel').carousel({
 //   interval: 6000,
