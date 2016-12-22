@@ -90,7 +90,7 @@ footer {
     font-size: 34px;
     text-align: center;
 }
-.right-section h3 {
+.right-section p {
     font-weight: 100;
     font-size: 24px;
     letter-spacing: 1px;
@@ -138,4 +138,42 @@ footer {
 }
 .makeVisible {
     visibility: visible;
+}
+
+
+
+/*CAROUSEL SECTION*/
+/*.slick-prev:before, .slick-next:before {
+    font-size: 40px;
+    color: #ccc;
+}
+
+.slick-initialized .slick-slide {
+    width: 100px !important;
+    height: 100px;
+}
+.slick-slider {
+    position: absolute;;
+    width: 40%;
+}
+
+.360ImagesCarousel{
+    padding: 0px 10px;
+}*/
+
+.slick-prev:before, .slick-next:before {
+    font-size: 40px;
+    color: #ccc;
+}
+.slick-slider {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.slide-prev {
+    left: -45px;
+}
+.slick-slide {
+    width: 120px !important;
+    padding: 0px 10px;
 }
