@@ -200,7 +200,13 @@ h1{
 
 
 /*------------------------------------------------------*/
-.tempCarousel .carouselTitle {
+.threeSixtyPhotoRow{
+    /*background-color: #eee;*/
+    bottom: 50px;
+    position: absolute;
+    width: 100%;
+}
+.threeSixtyPhoto .carouselTitle {
     text-align: left;
     text-shadow: none;
     font-size: 18px;
@@ -209,14 +215,8 @@ h1{
     font-weight: 100;
 
 }
-.tempCarouselFull{
-    /*background-color: #eee;*/
-    bottom: 50px;
-    position: absolute;
-    width: 100%;
-}
 
-.tempCarousel {
+.threeSixtyPhoto {
     width: 100%;
     height: 75px;
     vertical-align: middle;
@@ -225,13 +225,13 @@ h1{
     width: 100%;
     padding: 0px;
 }
-.tempCarousel ul {
+.threeSixtyPhoto ul {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 0px 15px;
 }
-.tempCarousel ul li {
+.threeSixtyPhoto ul li {
     list-style: none;
     width: 12%;
     max-width: 100px;   
@@ -241,10 +241,10 @@ h1{
     border: 1px solid transparent;
     padding: 0 3px;
 }
-.tempCarousel ul li:hover {
+.threeSixtyPhoto ul li:hover {
     border: 1px solid orange;
 }
-.tempCarousel ul li .row {
+.threeSixtyPhoto ul li .row {
     margin-left: 0px;
 
 }
