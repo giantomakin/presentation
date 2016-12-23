@@ -1,4 +1,7 @@
 var app = angular.module('presentationApp', []);
+app.controller('mainController', function($scope, $browser) {
+	$scope.baseURL = window.location.pathname;
+ });
 
 var $item = $('.carousel .item');
 var $wHeight = $(window).height();

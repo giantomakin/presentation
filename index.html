@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="presentationApp">
-
+<base href="{{baseURL}}" />
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,14 +10,15 @@
 
     <title>Presentation</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!--Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-	<!-- Custom CSS -->
-	<link href="bower_components/threesixty-slider/src/styles/threesixty.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Assets CSS -->
+    <link href="/bower_components/threesixty-slider/src/styles/threesixty.css" rel="stylesheet">
+    <link href="/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
+    <link href="/bower_components/slick-carousel/slick/slick-theme.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="/presentation/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
-    <link href="/presentation/bower_components/slick-carousel/slick/slick-theme.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,7 +30,7 @@
 
 </head>
 
-<body>
+<body ng-controller="mainController">
 
 	    <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
@@ -120,14 +121,13 @@
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
     crossorigin="anonymous"></script>
 
-      <!-- Bootstrap Core JavaScript -->
-     <script src="bower_components/threesixty-slider/dist/threesixty.min.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- AngularJS Core JavaScript -->
     <script src="bower_components/angular/angular.min.js"></script>
+
+    <script src="bower_components/threesixty-slider/dist/threesixty.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="js/app.js"></script>
