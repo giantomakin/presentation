@@ -1,70 +1,106 @@
-<div class="col-sm-8 left-section">
-    <div class="row">
-        <h1>Bootstrap Multiple image sliding demo</h1>
-    </div>
-    <div class="row threeSixtyPhotoRow">
+<div class="col-lg-8 left-section">
+			<div class="threesixty product1">
+		    <div class="spinner">
+		        <span>0%</span>
+		    </div>
+		    <ol class="threesixty_images" style="text-align: justify;"></ol>
+		</div>
+	<div class="row threeSixtyPhotoRow">
 
 
-      <div class="threeSixtyPhoto col-sm-12">
-        <p class="carouselTitle col-sm-12">Available <span style="color: orange;">Colors</span></p>
-        <ul>
-            <li>
-                <div class="individualPallete row" style="background-color: #f7f2ef;"></div>
-                <div class="individualPallete2 row" style="background-color: #9d6b38;"></div>
-            </li>
-            <li>
-                <div class="individualPallete row" style="background-color: #d1cbcd"></div>
-                <div class="individualPallete2 row" style="background-color: #9d6b38;"></div>
-            </li>
-            <li>
-                <div class="individualPallete row" style="background-color: #a6938c"></div>
-                <div class="individualPallete2 row" style="background-color: #9d6b38;"></div>
-            </li>
-            <li>
-                <div class="individualPallete row" style="background-color: #2e3349"></div>
-                <div class="individualPallete2 row" style="background-color: #9d6b38;"></div>
-            </li>
-            <li>
-                <div class="individualPallete row" style="background-color: #e5e1e0"></div>
-                <div class="individualPallete2 row" style="background-color: #9d6b38;"></div>
-            </li>
-            <li>
-                <div class="individualPallete row" style="background-color: #a89f9a"></div>
-                <div class="individualPallete2 row" style="background-color: #9d6b38;"></div>
-            </li>
-            <li>
-                <div class="individualPallete row" style="background-color: #3e2e2f"></div>
-                <div class="individualPallete2 row" style="background-color: #9d6b38;"></div>
-            </li>
-            <li>
-                <div class="individualPallete row" style="background-color: #4d443d"></div>
-                <div class="individualPallete2 row" style="background-color: #9d6b38;"></div>
-            </li>
-            <li>
-                <div class="individualPallete row" style="background-color: #8b8380"></div>
-                <div class="individualPallete2 row" style="background-color: #9d6b38;"></div>
-            </li>
-        </ul>
-      </div>
+		<div class="threeSixtyPhoto col-lg-12">
+			<p class="carouselTitle col-lg-12">Available <span style="color: orange;">Colors</span></p>
+			<ul>
+				<li>
+				<a href="#" data-color="#f7f2ef" ng-click="pickPallete($event)">
+						<div data-color="#f7f2ef" class="individualPallete row" style="background-color: #f7f2ef;"></div>
+						<div data-color="#f7f2ef" class="individualPallete2 row" style="background-color: #9d6b38;"></div>
+					</a>
+				</li>
+				<li>
+				<a href="#" data-color="#d1cbcd" ng-click="pickPallete($event)">
+						<div data-color="#d1cbcd" class="individualPallete row" style="background-color: #d1cbcd"></div>
+						<div data-color="#d1cbcd" class="individualPallete2 row" style="background-color: #9d6b38;"></div>
+					</a>
+				</li>
+				<li>
+				<a href="#" data-color="#a6938c" ng-click="pickPallete($event)">
+						<div data-color="#a6938c" class="individualPallete row" style="background-color: #a6938c"></div>
+						<div data-color="#a6938c" class="individualPallete2 row" style="background-color: #9d6b38;"></div>
+					</a>
+				</li>
+				<li>
+				<a href="#" data-color="#2e3349" ng-click="pickPallete($event)">
+						<div data-color="#2e3349" class="individualPallete row" style="background-color: #2e3349"></div>
+						<div data-color="#2e3349" class="individualPallete2 row" style="background-color: #9d6b38;"></div>
+					</a>
+				</li>
+				<li>
+				<a href="#" data-color="#e5e1e0" ng-click="pickPallete($event)">
+						<div data-color="#e5e1e0" class="individualPallete row" style="background-color: #e5e1e0"></div>
+						<div data-color="#e5e1e0" class="individualPallete2 row" style="background-color: #9d6b38;"></div>
+					</a>
+				</li>
+				<li>
+				<a href="#" data-color="#a89f9a" ng-click="pickPallete($event)">
+						<div data-color="#a89f9a" class="individualPallete row" style="background-color: #a89f9a"></div>
+						<div data-color="#a89f9a" class="individualPallete2 row" style="background-color: #9d6b38;"></div>
+					</a>
+				</li>
+				<li>
+				<a href="#" data-color="#3e2e2f" ng-click="pickPallete($event)">
+						<div data-color="#3e2e2f" class="individualPallete row" style="background-color: #3e2e2f"></div>
+						<div data-color="#3e2e2f" class="individualPallete2 row" style="background-color: #9d6b38;"></div>
+					</a>
+				</li>
+				<li>
+				<a href="#" data-color="#4d443d" ng-click="pickPallete($event)">
+						<div data-color="#4d443d" class="individualPallete row" style="background-color: #4d443d"></div>
+						<div data-color="#4d443d" class="individualPallete2 row" style="background-color: #9d6b38;"></div>
+					</a>
+				</li>
+				<li>
+				<a href="#" data-color="#8b8380" ng-click="pickPallete($event)">
+						<div data-color="#8b8380" class="individualPallete row" style="background-color: #8b8380"></div>
+						<div data-color="#8b8380" class="individualPallete2 row" style="background-color: #9d6b38;"></div>
+					</a>
+				</li>
+			</ul>
+		</div>
 
 
 
 
-    </div>
+	</div>
 </div>
 
-<div class="col-sm-4 right-section">
-    <div>
-        <h2>360&deg; Photography</h2>
-        <p>360&deg; photography allows users to examine an object by rotating and tilting the object to provide a full 360° view. This is perfect for couches, tables, and other home good that would be placed in the center of a room. Recommended for products that have one specific color.</p>
-    </div>
+<div class="col-lg-4 right-section">
+	<div>
+		<h2>360&deg; Photography</h2>
+		<p>360&deg; photography allows users to examine an object by rotating and tilting the object to provide a full 360° view. This is perfect for couches, tables, and other home good that would be placed in the center of a room. Recommended for products that have one specific color.</p>
+	</div>
 </div>
-    <!-- jQuery -->
-    <script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
 
-    <!-- Bootstrap Core JavaScript -->
+<script>
+$(document).ready(function(){
+	$('.product1').ThreeSixty({
+	      totalFrames: 17, // Total no. of image you have for 360 slider
+	      endFrame: 17, // end frame for the auto spin animation
+	      currentFrame: 1, // This the start frame for auto spin
+	      imgList: '.threesixty_images', // selector for image list
+	      progress: '.spinner', // selector to show the loading progress
+	      imagePath: 'assets/product/', // path of the image assets
+	      filePrefix: '', // file prefix if any
+	      ext: '.jpg', // extention for the assets
+	      height: 1000,
+	      width: 447,
+	      navigation: true,
+	      responsive: true
+	  });
+
+});
+</script>
+
+
 
 

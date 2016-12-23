@@ -32,7 +32,7 @@
 <body ng-controller="mainController">
 
 	    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <nav class="custom-nav navbar navbar-default navbar-fixed-bottom" role="navigation">
         <div class="container">
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -147,7 +147,7 @@
             next = $(this).siblings(':first');
           }
           next.children(':first-child').clone().appendTo($(this));
-          
+
           if (next.next().length>0) {
             next.next().children(':first-child').clone().appendTo($(this));
           } else {
