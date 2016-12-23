@@ -1,6 +1,9 @@
 var app = angular.module('presentationApp', []);
 app.controller('mainController', function($scope, $browser) {
+
 	$scope.baseURL = window.location.pathname;
+  console.log(window.location.pathname);
+
  });
 
 var $item = $('.carousel .item');
