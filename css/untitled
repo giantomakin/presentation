@@ -89,13 +89,13 @@ footer {
     font-weight: 600;
     font-size: 34px;
     text-align: center;
-    letter-spacing: 2px;
 }
 .right-section p {
     font-weight: 100;
-    font-size: 21px;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 1px;
+    font-size: 24px;
+    word-spacing: 5px !important;
+    font-family: "Roboto Condensed", sans-serif;
+    line-height: 30px;
 }
 
 .navbar-default {
@@ -268,47 +268,14 @@ h1{
 .productVisualizer .active {
     height: auto;
     width: auto;
-    padding: 0px;
 }
-.productVisualizer .secondRowTabs > li {
-    padding: 0px;
-}
-
-.productVisualizer .secondRowTabs a {
-    font-size: 18px;
-    padding: 0px 30px;
-    border-radius: 0;
-    background-color: grey !important;
-    color: #ffffff !important;
-    text-shadow: none;
-    font-weight: 200;
-    letter-spacing: 1px
-}
-.productVisualizer .secondRowTabs a:focus {
-    background-color: orange !important;
-}
-
-
-
-.productVisualizer .firstRowTabs a {
-    font-size: 20px;
-    background-color: #ffffff;
-    color: grey;
-    background-color: #ffffff;
-    text-shadow: none;
-}
-.productVisualizer .firstRowTabs a:focus {
-    color: orange !important;
-}
-
 
 
 .productVisualRow{
     background-color: #eee;
-    position: relative;
+    position: absolute;
     width: 100%;
     z-index: 1;
-    margin-left: 0px;
 }
 .productVisual .carouselTitle {
     text-align: left;
@@ -343,7 +310,7 @@ h1{
     flex-direction: column;
     justify-content: flex-end;
     border: 1px solid transparent;
-    padding: 10px 3px;
+    padding: 0 3px;
 }
 .productVisual ul li:hover {
     border: 1px solid orange;
@@ -359,8 +326,4 @@ h1{
     background-color: #ccc;
     margin-bottom: 5px;
 }
-
-
-
-
 /*------------------------------------------------------*/
