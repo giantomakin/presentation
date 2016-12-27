@@ -1,18 +1,25 @@
 <div class="col-sm-5 left-section">
+	<div class="row staticPictureSection">
+		<div class="col-sm-12 productImages">
+			<div class="col-sm-12 singleImage">
 
-	<div class="productVisualizer">
+				<div class="productVisualizer">
 
-				<div class="threesixty product">
+							<div class="threesixty product">
 
-					<div class="spinner">
+								<div class="spinner">
 
-						<span>0%</span>
-					</div>
-					<ol class="threesixty_images" style="text-align: justify;"></ol>
+									<span>0%</span>
+								</div>
+								<ol class="threesixty_images" style="text-align: justify;"></ol>
+							</div>
+
 				</div>
 
-
+			</div>
+		</div>
 	</div>
+
 
 </div>
 <div class="col-sm-3 middle-section" ng-include="'pages/templates/middle-section.html'"></div>
@@ -26,8 +33,8 @@
 <script>
 $(document).ready(function(){
 	$('.product').ThreeSixty({
-	      totalFrames: 17, // Total no. of image you have for 360 slider
-	      endFrame: 17, // end frame for the auto spin animation
+	      totalFrames: 21, // Total no. of image you have for 360 slider
+	      endFrame: 21, // end frame for the auto spin animation
 	      currentFrame: 1, // This the start frame for auto spin
 	      imgList: '.threesixty_images', // selector for image list
 	      progress: '.spinner', // selector to show the loading progress

@@ -69,6 +69,7 @@ footer {
 .left-section {
     background-color: #fff;
     height:calc(100% - 273px);
+    padding: 30px;
 }
 
 .middle-section {
@@ -221,35 +222,13 @@ h1{
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    border: 4px solid #eee;
 }
-/*.staticPictureSection h1 {
-    color: #e97925;
-    font-size: 34px;
-    font-family: 'Roboto Condensed', sans-serif;
-    text-shadow: none;
-    margin: 0px;
-    padding: 15px 0;
-}*/
-/*.staticPictureSection p {
-    font-size: 23px;
-    font-family: 'Roboto Condensed', sans-serif;
-    text-shadow: none;
-    color: grey;
 
-}*/
-
-/*.staticPictureSection ul {
-    padding-left: 0px;
-}*/
-
-/*.staticPictureSection li {
-    color: #e97925;
-
-}*/
 
 .staticPictureSection .img-responsive {
     height: 100%;
-    border: 4px solid #eee;
+    /*border: 4px solid #eee;*/
 }
 
 
@@ -267,30 +246,21 @@ h1{
 .staticPictureSection .productImages .singleImage {
     height: 100%;
 }
-.staticPictureSection .productInfo {
+.staticPictureSection2 .productInfo {
     top: 5%;
 }
-.staticPictureSection .productInfo img {
+.staticPictureSection2 .productInfo img {
     padding: 25px 0;
 }
 .staticPictureSection .imageToggle {
     padding: 15px 0px;
 }
 .staticPictureSection .imageToggle img {
-    /*width:100%;*/
     height: auto;
     padding: 5px;
     border: 4px solid #eee;
 }
 
-/*.staticPictureSection .reviewLikeIcons {
-    display: flex;
-    justify-content: space-between;
-}*/
-
-/*.staticPictureSection .productInfo > * {
-    margin-top: 15px;
-}*/
 
 .staticPictureSection .productInfo {
     text-shadow: none;
@@ -309,18 +279,14 @@ h1{
 .availableColorsList li {
     float: left;
     list-style: none;
-    width: 25px;
-    height: 25px;
-    margin: 5px;
-    border: 2px solid #ccc;
 }
 .availableColorsList li a {
-	text-decoration: none !important;
+    margin: 5px;
+    padding: 0 10px;
+    border: 2px solid #ccc;
 }
 .availableColorsList li a:hover {
 	text-decoration: none !important;
-	display:flex !important;
-	height:100% !important;
 }
 .boxedWithInfo {
     border: 1px solid #ccc;
@@ -519,7 +485,7 @@ h1{
 
 
 .threesixty.product, .firstRowTabs {
-    border: 4px solid #eee;
+    /*border: 4px solid #eee;*/
     padding: 10px 15px;
     height: 100% !important;
 }
