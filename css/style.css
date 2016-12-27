@@ -54,8 +54,8 @@ footer {
     z-index: 1031;
 }
 .carousel img {
-    background-size: cover !important;
     height: 100% !important;
+    object-fit: contain;
 }
 
 .carousel-caption {
@@ -68,13 +68,13 @@ footer {
 
 .left-section {
     background-color: #fff;
-    height:calc(100% - 260px);
+    height:calc(100% - 273px);
 }
 
 
 .right-section {
     background-color: #e97925;
-    height: calc(100% - 260px);
+    height: calc(100% - 273px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,9 +93,12 @@ footer {
 }
 .right-section p {
     font-weight: 100;
-    font-size: 21px;
+    font-size: 23px;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;
+    -webkit-hyphens: auto !important;
+    -ms-hyphens: auto !important;
+    hyphens: auto !important;
 }
 
 .navbar-default {
@@ -110,7 +113,7 @@ footer {
 .navbar-nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
 }
 .nav > li {
@@ -182,7 +185,6 @@ body{
 h1{
   /*color: white;*/
   font-size: 2.25em;
-  text-align: center;
   margin-top: 1em;
   margin-bottom: 2em;
   text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
@@ -201,7 +203,108 @@ h1{
 
 /*------------------------------------------------------*/
 
+/*----Static Picture Section----*/
+.col-xs-8.left-section.ng-scope {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.staticPictureSection {
+    padding: 15px 0;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.staticPictureSection h1 {
+    color: orange;
+    font-size: 34px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-shadow: none;
+    margin: 0px;
+    padding: 15px 0;
+}
+.staticPictureSection p {
+    font-size: 23px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-shadow: none;
+    color: grey;
+
+}
+
+.staticPictureSection ul {
+    padding-left: 0px;
+}
+.staticPictureSection li {
+    color: orange;
+
+}
+
+.staticPictureSection img {
+    width: 100%;
+    border: 4px solid #eee;
+}
+.staticPictureSection .productImages {
+    height: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.staticPictureSection .productInfo {
+    top: 5%;
+}
+.staticPictureSection .imageToggle {
+    padding: 15px 0px;
+}
+.staticPictureSection .imageToggle img {
+    width:100%;
+    height: auto;
+    padding: 5px;
+    border: 4px solid #eee;
+}
+
+.staticPictureSection .reviewLikeIcons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.staticPictureSection .productInfo > * {
+    margin-top: 15px;
+}
+
+.staticPictureSection .productInfo {
+    text-shadow: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 23px;
+}
+
+.staticPictureSection .productInfo p {
+    display: inline;
+}
+
+.availableColorsList li {
+    float: left;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    border: 2px solid #ccc;
+}
+.boxedWithInfo {
+    border: 1px solid #ccc;
+    height: 150px;
+}
+
+
+/*-----------------------------------*/
+
 /*----360 Photography Section----*/
+    
+.threesixty.product1 {
+    /*height: calc(100% - 273px) !important;*/
+    display: table-row;
+}
 .threeSixtyPhotoRow{
     /*background-color: #eee;*/
     bottom: 50px;
@@ -212,7 +315,7 @@ h1{
     text-align: left;
     text-shadow: none;
     font-size: 18px;
-    font-family: "roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #000000;
     font-weight: 100;
 
@@ -248,7 +351,6 @@ h1{
 }
 .threeSixtyPhoto ul li .row {
     margin-left: 0px;
-
 }
 
 .individualPallete {
@@ -265,41 +367,65 @@ h1{
 /*------------------------------------------------------*/
 
 /*----Product Visualization----*/
+.productVisualizer {
+    padding: 45px !important;
+    height: calc(100% - 170px) !important;
+}
 .productVisualizer .active {
     height: auto;
     width: auto;
     padding: 0px;
 }
-.productVisualizer .secondRowTabs > li {
-    padding: 0px;
-}
 
-.productVisualizer .secondRowTabs a {
-    font-size: 18px;
-    padding: 0px 30px;
-    border-radius: 0;
-    background-color: grey !important;
-    color: #ffffff !important;
-    text-shadow: none;
-    font-weight: 200;
-    letter-spacing: 1px
+.productVisualizer .firstRowTabs li:first-child {
+    padding-left: 0px;
 }
-.productVisualizer .secondRowTabs a:focus {
-    background-color: orange !important;
+.productVisualizer .firstRowTabs li {
+    padding: 0px 25px;
 }
-
-
 
 .productVisualizer .firstRowTabs a {
-    font-size: 20px;
-    background-color: #ffffff;
-    color: grey;
-    background-color: #ffffff;
+    font-size: 23px;
+    color: #777 !important;
     text-shadow: none;
+    border: none !important;
+    font-family: 'Roboto condensed', sans-serif;
+    letter-spacing: 1px;
+    padding: 0px;
 }
 .productVisualizer .firstRowTabs a:focus {
     color: orange !important;
 }
+
+.productVisualizer .secondRowTabs {
+    background: #676767;
+    border-bottom: none !important;
+}
+.productVisualizer .secondRowTabs > li {
+    padding: 0px;
+}
+
+
+.productVisualizer .secondRowTabs a {
+    font-size: 18px;
+    padding: 0px 30px;
+    border: none !important;
+    border-radius: 0px;
+    background-color: #676767 !important;
+    color: #ffffff !important;
+    text-shadow: none;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-family: 'Roboto condensed', sans-serif;
+}
+.productVisualizer .secondRowTabs a:focus {
+    background-color: orange !important;
+    border-left: 3px solid #eee !important;
+    border-right: 3px solid #eee !important;
+}
+
+
+
 
 
 
@@ -314,7 +440,7 @@ h1{
     text-align: left;
     text-shadow: none;
     font-size: 18px;
-    font-family: "roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #000000;
     font-weight: 100;
 
@@ -360,6 +486,16 @@ h1{
     margin-bottom: 5px;
 }
 
+
+.threesixty.product, .firstRowTabs {
+    border: 4px solid #eee;
+    padding: 10px 15px;
+    height: 100% !important;
+}
+
+.productVisual .secondRowTabs {
+    background-color: grey;
+}
 
 
 
