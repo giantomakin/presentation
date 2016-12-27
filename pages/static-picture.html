@@ -14,7 +14,32 @@
 <div class="col-sm-3 middle-section" ng-include="'pages/templates/middle-section.html'"></div>
 <div class="col-sm-4 right-section">
 	<div>
+		<div class="switchViewButton">
+			<button>Main View</button>
+			<button class="btn btn-lg" data-toggle="modal" data-target="#myModal">Video</button>
+		</div>
 		<h2>Static Picture</h2>
 		<p>A professional studio-grade photo of your product to display in House Tipster’s marketplace. Requires shipping of product(s) to our location.</p>
+	</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<video width="800" controls>
+					<source src="images/video/scanyourthings_test_video.mp4" type="video/mp4">
+					<!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+				</video>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
 	</div>
 </div>
