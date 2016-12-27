@@ -1,7 +1,4 @@
-<div class="col-lg-8 left-section">
-
-	<div class="">
-
+<div class="col-sm-5 left-section">
 		<div class="threesixty product1">
 		    <div class="spinner">
 		        <span>0%</span>
@@ -9,7 +6,7 @@
 		    <ol class="threesixty_images" style="text-align: justify;"></ol>
 		</div>
 
-		<div class="row threeSixtyPhotoRow">
+<!-- 		<div class="row threeSixtyPhotoRow">
 			<div class="threeSixtyPhoto col-xs-12">
 				<p class="carouselTitle col-xs-12">Available <span style="color: orange;">Colors</span></p>
 				<ul>
@@ -69,13 +66,10 @@
 					</li>
 				</ul>
 			</div>
-		</div>
-
-	</div>
-
+		</div> -->
 </div>
-
-<div class="col-lg-4 right-section">
+<div class="col-sm-3 middle-section" ng-include="'pages/templates/middle-section.html'"></div>
+<div class="col-sm-4 right-section">
 	<div>
 		<h2>360&deg; Photography</h2>
 		<p>360&deg; photography allows users to examine an object by rotating and tilting the object to provide a full 360° view. This is perfect for couches, tables, and other home good that would be placed in the center of a room. Recommended for products that have one specific color.</p>
@@ -95,7 +89,7 @@ $(document).ready(function(){
 	      ext: '.png', // extention for the assets
 	      height: 1000,
 	      width: 447,
-	      navigation: true,
+	      navigation: false,
 	      responsive: true
 	  });
 

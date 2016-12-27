@@ -314,6 +314,14 @@ h1{
     margin: 5px;
     border: 2px solid #ccc;
 }
+.availableColorsList li a {
+	text-decoration: none !important;
+}
+.availableColorsList li a:hover {
+	text-decoration: none !important;
+	display:flex !important;
+	height:100% !important;
+}
 .boxedWithInfo {
     border: 1px solid #ccc;
     height: 150px;
@@ -323,7 +331,7 @@ h1{
 /*-----------------------------------*/
 
 /*----360 Photography Section----*/
-    
+
 .threesixty.product1 {
     /*height: calc(100% - 273px) !important;*/
     display: table-row;
@@ -362,7 +370,7 @@ h1{
 .threeSixtyPhoto ul li {
     list-style: none;
     width: 12%;
-    max-width: 100px;   
+    max-width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -487,7 +495,7 @@ h1{
 .productVisual ul li {
     list-style: none;
     width: 12%;
-    max-width: 100px;   
+    max-width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
