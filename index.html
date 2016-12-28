@@ -82,24 +82,24 @@
 
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner" role="listbox">
-	    <div class="item">
+	    <div class="item" id="item1">
 
 			<div class="carousel-caption" ng-include="'pages/static-picture.html'"></div>
 
 	    </div>
-	    <div class="item">
+	    <div class="item" id="item2">
 	        <div class="carousel-caption" ng-include="'pages/product-render.html'"></div>
 	    </div>
-	    <div class="item">
+	    <div class="item" id="item3">
 	        <div class="carousel-caption" ng-include="'pages/threesixty-photography.html'"></div>
 	    </div>
-	    <div class="item">
+	    <div class="item" id="item4">
 	        <div class="carousel-caption" ng-include="'pages/product-visualization.html'"></div>
 	    </div>
-	    <div class="item">
+	    <div class="item" id="item5">
 	        <div class="carousel-caption" ng-include="'pages/virtual-room.html'"></div>>
 	    </div>
-	    <div class="item">
+	    <div class="item" id="item6">
 	        <div class="carousel-caption" ng-include="'pages/partnered-content.html'"></div>>
 	    </div>
 	  </div>
@@ -132,31 +132,6 @@
 
     <!-- Custom JavaScript -->
     <script src="js/app.js"></script>
-
-
-        <script>
-
-        // Instantiate the Bootstrap carousel
-        $('.multi-item-carousel').carousel({
-          interval: false
-        });
-
-        // for every slide in carousel, copy the next slide's item in the slide.
-        // Do the same for the next, next item.
-        $('.multi-item-carousel .item').each(function(){
-          var next = $(this).next();
-          if (!next.length) {
-            next = $(this).siblings(':first');
-          }
-          next.children(':first-child').clone().appendTo($(this));
-
-          if (next.next().length>0) {
-            next.next().children(':first-child').clone().appendTo($(this));
-          } else {
-            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-          }
-        });
-    </script>
 
 </body>
 
