@@ -17,10 +17,6 @@ app.controller('mainController', function($scope, $browser) {
 	  $item.height($wHeight);
 	});
 
-	myCarousel.carousel({
-	  swipe: 30
-	});
-
 	$scope.baseURL = window.location.pathname;
 
 	$scope.pickPallete = function(e){
@@ -28,27 +24,27 @@ app.controller('mainController', function($scope, $browser) {
 		var color = $(e.target).data('color');
 		switch(color){
 			case '#2e3349':
-				$("#product-render-image").fadeOut(100, function() {
-				  $("#product-render-image").load(function() { $("#product-render-image").fadeIn(100); });
-				  $("#product-render-image").attr("src", "images/fabric/blue.png");
+				$("#product-render-image").fadeOut(500, function() {
+				  $(this).load(function() { $(this).fadeIn(500); });
+				  $(this).attr("src", "images/fabric/blue.png");
 				});
 			break;
 			case '#8b8380':
-				$("#product-render-image").fadeOut(100, function() {
-				  $("#product-render-image").load(function() { $("#product-render-image").fadeIn(100); });
-				  $("#product-render-image").attr("src", "images/fabric/default.png");
+				$("#product-render-image").fadeOut(500, function() {
+				  $(this).load(function() { $(this).fadeIn(500); });
+				  $(this).attr("src", "images/fabric/default.png");
 				});
 			break;
 			case '#4d443d':
-				$("#product-render-image").fadeOut(100, function() {
-				  $("#product-render-image").load(function() { $("#product-render-image").fadeIn(100); });
-				  $("#product-render-image").attr("src", "images/fabric/darkbrown.png");
+				$("#product-render-image").fadeOut(500, function() {
+				  $(this).load(function() { $(this).fadeIn(500); });
+				  $(this).attr("src", "images/fabric/darkbrown.png");
 				});
 			break;
 			case '#3e2e2f':
-				$("#product-render-image").fadeOut(100, function() {
-				  $("#product-render-image").load(function() { $("#product-render-image").fadeIn(100); });
-				  $("#product-render-image").attr("src", "images/fabric/brown.png");
+				$("#product-render-image").fadeOut(500, function() {
+				  $(this).load(function() { $(this).fadeIn(500); });
+				  $(this).attr("src", "images/fabric/brown.png");
 				});
 			break;
 		}
