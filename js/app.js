@@ -1,17 +1,6 @@
 var app = angular.module('presentationApp', []);
 app.controller('mainController', function($scope, $browser) {
 
-	$scope.baseURL = window.location.pathname;
-
-	$scope.pickPallete = function(e){
-		e.preventDefault();
-		var color = $(e.target).data('color');
-		alert(color);
-	}
-
- });
-
-$(document).ready(function(){
 	var $item = $('.carousel .item');
 	var $wHeight = $(window).height();
 	var myCarousel = $('#mycarousel');
@@ -27,25 +16,40 @@ $(document).ready(function(){
 	  $wHeight = $(window).height();
 	  $item.height($wHeight);
 	});
+
 	myCarousel.carousel({
 	  swipe: 30
 	});
+
+	$scope.baseURL = window.location.pathname;
+
+	$scope.pickPallete = function(e){
+		e.preventDefault();
+		var color = $(e.target).data('color');
+		alert(color);
+	}
+
+	$scope.navigateSlide = function(e){
+		e.preventDefault();
+		var id = $(e.target).attr('id');
+		var newIndex = $(e.target).parent().index();
+		myCarousel.carousel( newIndex );
+		clearActiveSlides();
+		$("#"+id).addClass("itemSelected");
+		$("#"+id).prev().addClass("makeVisible");
+	}
+
 	myCarousel.bind('slide.bs.carousel', function (e) {
 		var id = $(e.relatedTarget).data('target-id');
-	    $(".nav-a").removeClass("itemSelected");
-	    $(".nav-a").prev().removeClass("makeVisible");
+	    clearActiveSlides();
 	    $("#"+id).addClass("itemSelected");
 	    $("#"+id).prev().addClass("makeVisible");
 	});
-	myNav.find('li > a').click(function() {
-	  var id = $(this).attr('id');
-	  var newIndex = $(this).parent().index();
-	  myCarousel.carousel( newIndex );
-	  $(".nav-a").removeClass("itemSelected");
-	  $(".nav-a").prev().removeClass("makeVisible");
 
-	  $("#"+id).addClass("itemSelected");
-	  $("#"+id).prev().addClass("makeVisible");
-	});
+	function clearActiveSlides(){
 
-});
+		$(".nav-a").removeClass("itemSelected");
+		$(".nav-a").prev().removeClass("makeVisible");
+	}
+ });
+
