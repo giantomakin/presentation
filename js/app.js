@@ -22,30 +22,31 @@ app.controller('mainController', function($scope, $browser) {
 	$scope.pickPallete = function(e){
 		e.preventDefault();
 		var color = $(e.target).data('color');
+		console.log(color);
 		switch(color){
-			case '#2e3349':
-				$("#product-render-image").fadeOut(500, function() {
-				  $(this).load(function() { $(this).fadeIn(500); });
-				  $(this).attr("src", "images/fabric/blue.png");
-				});
+			case '#2f3349':
+				renderColors("blue");
 			break;
-			case '#8b8380':
-				$("#product-render-image").fadeOut(500, function() {
-				  $(this).load(function() { $(this).fadeIn(500); });
-				  $(this).attr("src", "images/fabric/default.png");
-				});
+			case '#eae9e5':
+				renderColors("default");
 			break;
-			case '#4d443d':
-				$("#product-render-image").fadeOut(500, function() {
-				  $(this).load(function() { $(this).fadeIn(500); });
-				  $(this).attr("src", "images/fabric/darkbrown.png");
-				});
+			case '#3f4339':
+				renderColors("darkbrown");
 			break;
-			case '#3e2e2f':
-				$("#product-render-image").fadeOut(500, function() {
-				  $(this).load(function() { $(this).fadeIn(500); });
-				  $(this).attr("src", "images/fabric/brown.png");
-				});
+			case '#572828':
+				renderColors("brown");
+			break;
+			case 1:
+				staticColors("B");
+			break;
+			case 2:
+				staticColors("W");
+			break;
+			case 3:
+				staticColors("G");
+			break;
+			case 4:
+				staticColors("R");
 			break;
 		}
 	}
@@ -71,6 +72,38 @@ app.controller('mainController', function($scope, $browser) {
 
 		$(".nav-a").removeClass("itemSelected");
 		$(".nav-a").prev().removeClass("makeVisible");
+	}
+
+	function staticColors(color)
+	{
+		$("#static-img-m").fadeOut(500, function() {
+		  $(this).load(function() { $(this).fadeIn(500); });
+		  $(this).attr("src", "images/static/main_image_"+color+".png");
+		});
+		$("#static-img-1").fadeOut(500, function() {
+		  $(this).load(function() { $(this).fadeIn(500); });
+		  $(this).attr("src", "images/static/1_"+color+".png");
+		});
+		$("#static-img-2").fadeOut(500, function() {
+		  $(this).load(function() { $(this).fadeIn(500); });
+		  $(this).attr("src", "images/static/2_"+color+".png");
+		});
+		$("#static-img-3").fadeOut(500, function() {
+		  $(this).load(function() { $(this).fadeIn(500); });
+		  $(this).attr("src", "images/static/3.png");
+		});
+		$("#static-img-4").fadeOut(500, function() {
+		  $(this).load(function() { $(this).fadeIn(500); });
+		  $(this).attr("src", "images/static/4_"+color+".png");
+		});
+	}
+
+	function renderColors(color)
+	{
+		$("#product-render-image").fadeOut(500, function() {
+		  $(this).load(function() { $(this).fadeIn(500); });
+		  $(this).attr("src", "images/fabric/"+color+".png");
+		});
 	}
  });
 

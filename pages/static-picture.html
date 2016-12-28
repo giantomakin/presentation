@@ -8,25 +8,41 @@
 <div class="col-sm-5 left-section" style="padding: 15px;">
 	<div class="row staticPictureSection" style="border: 0;">
 		<div class="col-sm-12 productImages">
-			<div class="col-sm-12 singleImage"><img src="images/static/main_image_W.png" class="img-responsive center-block" alt="Static_Picture" style="border: 2px solid #eee;"></div>
+			<div class="col-sm-12 singleImage"><img src="images/static/main_image_W.png" class="img-responsive center-block" id="static-img-m" alt="Static_Picture" style="border: 2px solid #eee;"></div>
 			<div class="imageToggle col-sm-12">
-				<div class="col-sm-3"><a href="#"><img src="images/static/1_W.png"></a></div>
-				<div class="col-sm-3"><a href="#"><img src="images/static/2_W.png"></a></div>
-				<div class="col-sm-3"><a href="#"><img src="images/static/3.png"></a></div>
-				<div class="col-sm-3"><a href="#"><img src="images/static/4_W.png"></a></div>
+				<div class="col-sm-3"><a href="#"><img id="static-img-1" src="images/static/1_W.png"></a></div>
+				<div class="col-sm-3"><a href="#"><img id="static-img-2" src="images/static/2_W.png"></a></div>
+				<div class="col-sm-3"><a href="#"><img id="static-img-3" src="images/static/3.png"></a></div>
+				<div class="col-sm-3"><a href="#"><img id="static-img-4" src="images/static/4_W.png"></a></div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="col-sm-3 middle-section" ng-include="'pages/templates/middle-section.html'"></div>
+<div class="col-sm-3 middle-section">
+	<div class="row staticPictureSection2">
+			<div class="col-sm-12 productInfo" style="text-align: left !important;">
+
+				<img src="images/product_name_content.png">
+
+					<p>Available Colors</p>
+					<ul class="availableColorsList">
+						<li><a href="#" style="background-color: #2f3349;" data-static="1" data-color="1" ng-click="pickPallete($event)">&nbsp;</a></li>
+						<li><a href="#" style="background-color: #eae9e5;" data-static="2" data-color="2" ng-click="pickPallete($event)">&nbsp;</a></li>
+						<li><a href="#" style="background-color: #3f4339;" data-static="3" data-color="3" ng-click="pickPallete($event)">&nbsp;</a></li>
+						<li><a href="#" style="background-color: #572828;" data-static="4" data-color="4" ng-click="pickPallete($event)">&nbsp;</a></li>
+					</ul>
+			</div>
+		</div>
+
+</div>
 
 
 <!-- <div class="col-sm-8">
 	<div>
 		<video controls>
 			<source src="images/video/tablet_test.mp4" type="video/mp4">
-		</video>	
+		</video>
 	</div>
 </div> -->
 
