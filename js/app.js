@@ -9,7 +9,6 @@ app.controller('mainController', function($scope, $browser) {
 		alert(color);
 	}
 
-
  });
 
 $(document).ready(function(){
@@ -28,7 +27,9 @@ $(document).ready(function(){
 	  $wHeight = $(window).height();
 	  $item.height($wHeight);
 	});
-
+	myCarousel.carousel({
+	  swipe: 30
+	});
 	myCarousel.bind('slide.bs.carousel', function (e) {
 		var id = $(e.relatedTarget).data('target-id');
 	    $(".nav-a").removeClass("itemSelected");
@@ -36,7 +37,6 @@ $(document).ready(function(){
 	    $("#"+id).addClass("itemSelected");
 	    $("#"+id).prev().addClass("makeVisible");
 	});
-
 	myNav.find('li > a').click(function() {
 	  var id = $(this).attr('id');
 	  var newIndex = $(this).parent().index();
@@ -49,10 +49,3 @@ $(document).ready(function(){
 	});
 
 });
-
-
-
-// $('.carousel').carousel({
-//   interval: 6000,
-//   pause: "false"
-// });
