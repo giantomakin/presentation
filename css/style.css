@@ -262,13 +262,13 @@ h1{
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    border: 4px solid #eee;
+    border: 2px solid #eee;
 }
 
 
 .staticPictureSection .img-responsive {
     height: 100%;
-    /*border: 4px solid #eee;*/
+    /*border: 2px solid #eee;*/
 }
 
 
@@ -292,7 +292,7 @@ h1{
 .staticPictureSection .imageToggle img {
     height: auto;
     padding: 5px;
-    border: 4px solid #eee;
+    border: 2px solid #eee;
 }
 
 .staticPictureSection .click_and_drag {
@@ -329,6 +329,7 @@ h1{
     margin: 5px;
     padding: 0 10px;
     border: 2px solid #ccc;
+    text-decoration: none;
 }
 .availableColorsList li a:hover {
 	text-decoration: none !important;
@@ -530,7 +531,7 @@ h1{
 
 
 .threesixty.product, .firstRowTabs {
-    /*border: 4px solid #eee;*/
+    /*border: 2px solid #eee;*/
     /*padding: 10px 15px;*/
     /*height: 100% !important;*/
     display: table-row;
