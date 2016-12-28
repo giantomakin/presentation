@@ -1,20 +1,29 @@
 <div class="col-sm-5 left-section">
 	<div class="row staticPictureSection">
 		<div class="col-sm-12 productImages">
-			<div class="col-sm-12 singleImage" style="height: 70%">
-				<div class="threesixty product1">
-				    <div class="spinner">
-				        <span>0%</span>
-				    </div>
-				    <ol class="threesixty_images" style="text-align: justify;"></ol>
+			
+			<div class="col-sm-12 singleImage" style="height: 70%;">
+
+				<div class="productVisualizer">
+					<div class="threesixty product">
+						<div class="spinner">
+							<span>0%</span>
+						</div>
+						<ol class="threesixty_images" style="text-align: justify;"></ol>
+					</div>
 				</div>
+
+			</div>
+
+			<div class="click_and_drag">
+				<img src="images/click_n_drag.png">
 			</div>
 		</div>
 	</div>
-
-
 </div>
+
 <div class="col-sm-3 middle-section" ng-include="'pages/templates/middle-section.html'"></div>
+
 <div class="col-sm-4 right-section">
 	<div>
 		<h2>360&deg; Photography</h2>
@@ -24,7 +33,7 @@
 
 <script>
 $(document).ready(function(){
-	$('.product1').ThreeSixty({
+	$('.product').ThreeSixty({
 	      totalFrames: 73, // Total no. of image you have for 360 slider
 	      endFrame: 73, // end frame for the auto spin animation
 	      currentFrame: 1, // This the start frame for auto spin
