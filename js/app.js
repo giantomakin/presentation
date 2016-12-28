@@ -26,7 +26,32 @@ app.controller('mainController', function($scope, $browser) {
 	$scope.pickPallete = function(e){
 		e.preventDefault();
 		var color = $(e.target).data('color');
-		alert(color);
+		switch(color){
+			case '#2e3349':
+				$("#product-render-image").fadeOut(100, function() {
+				  $("#product-render-image").load(function() { $("#product-render-image").fadeIn(100); });
+				  $("#product-render-image").attr("src", "images/fabric/blue.png");
+				});
+			break;
+			case '#8b8380':
+				$("#product-render-image").fadeOut(100, function() {
+				  $("#product-render-image").load(function() { $("#product-render-image").fadeIn(100); });
+				  $("#product-render-image").attr("src", "images/fabric/default.png");
+				});
+			break;
+			case '#4d443d':
+				$("#product-render-image").fadeOut(100, function() {
+				  $("#product-render-image").load(function() { $("#product-render-image").fadeIn(100); });
+				  $("#product-render-image").attr("src", "images/fabric/darkbrown.png");
+				});
+			break;
+			case '#3e2e2f':
+				$("#product-render-image").fadeOut(100, function() {
+				  $("#product-render-image").load(function() { $("#product-render-image").fadeIn(100); });
+				  $("#product-render-image").attr("src", "images/fabric/brown.png");
+				});
+			break;
+		}
 	}
 
 	$scope.navigateSlide = function(e){
