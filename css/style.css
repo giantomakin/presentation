@@ -602,7 +602,6 @@ a.right.carousel-control {
 .video {
     display: inline-block;
     vertical-align: baseline;
-    /* margin: 0 auto; */
     max-width: 1800px;
 }
 .hideLeftStaticPicture {
