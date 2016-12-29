@@ -28,10 +28,10 @@ app.controller('mainController', function($scope, $browser) {
 				renderColors("blue");
 			break;
 			case '#eae9e5':
-				renderColors("defaultw");
+				renderColors("white");
 			break;
 			case '#7a736d':
-				renderColors("default");
+				renderColors("defaultw");
 			break;
 			case '#572828':
 				renderColors("brown");
