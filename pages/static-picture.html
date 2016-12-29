@@ -1,11 +1,10 @@
-<!-- <div class="col-sm-12" style="position:absolute;">
-	<video controls>
+<div class="col-sm-12 video_section" style="position:absolute; left:0;">
+	<video controls loop width="80%" height="auto">
 			<source src="images/video/tablet_test_2.mp4" type="video/mp4">
 		</video>
-</div> -->
+</div>
 
-
-<div class="col-sm-5 left-section" style="padding: 15px;">
+<div class="col-sm-5 left-section hideLeftStaticPicture" style="padding: 15px;">
 	<div class="row staticPictureSection" style="border: 0;">
 		<div class="col-sm-12 productImages">
 			<div class="col-sm-12 singleImage"><img src="images/static/main_image_W.png" class="img-responsive center-block" id="static-img-m" alt="Static_Picture" style="border: 2px solid #eee;"></div>
@@ -19,7 +18,7 @@
 	</div>
 </div>
 
-<div class="col-sm-3 middle-section">
+<div class="col-sm-3 middle-section hideMiddleStaticPicture">
 	<div class="row staticPictureSection2">
 			<div class="col-sm-12 productInfo" style="text-align: left !important;">
 
@@ -47,11 +46,11 @@
 </div> -->
 
 
-<div class="col-sm-4 right-section">
+<div class="col-sm-4 right-section" style="float:right;">
 	<div>
 		<div class="switchViewButton">
-			<button class="btn btn-lg">Main View</button>
-			<button class="btn btn-lg" data-toggle="modal" data-target="#myModal">Video</button>
+			<button class="btn btn-lg" id="main_view_button">Main View</button>
+			<button class="btn btn-lg" id="video_button">Video</button>
 		</div>
 		<h2>Static Picture</h2>
 		<p>A professional studio-grade photo of your product to display in House Tipster’s marketplace. Requires shipping of product(s) to our location.</p>
@@ -63,7 +62,11 @@
 
 
 
-
+<script type="text/javascript">
+$("#video_button").click(function() {
+  $(".hideLeftStaticPicture, .hideMiddleStaticPicture").toggle({display: 'hidden'});
+});
+</script>
 
 
 
