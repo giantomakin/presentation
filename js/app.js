@@ -31,7 +31,7 @@ app.controller('mainController', function($scope, $browser) {
 				renderColors("white");
 			break;
 			case '#7a736d':
-				renderColors("defaultw");
+				renderColors("gray");
 			break;
 			case '#572828':
 				renderColors("brown");
