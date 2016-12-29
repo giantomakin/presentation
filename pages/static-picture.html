@@ -1,6 +1,6 @@
-<div class="col-sm-12 video_section" style="position:absolute; left:0;">
-	<video controls loop width="80%" height="auto">
-			<source src="images/video/tablet_test_2.mp4" type="video/mp4">
+<div class="col-sm-8 video_section">
+	<video id="static_picture_video" loop width="100%" height="100%">
+			<source src="images/video/tablet_test.mp4" type="video/mp4">
 		</video>
 </div>
 
@@ -49,8 +49,8 @@
 <div class="col-sm-4 right-section" style="float:right;">
 	<div>
 		<div class="switchViewButton">
-			<button class="btn btn-lg" id="main_view_button">Main View</button>
-			<button class="btn btn-lg" id="video_button">Video</button>
+			<button class="btn btn-lg" id="main_view_button" onclick="pause()">Main View</button>
+			<button class="btn btn-lg" id="video_button" onclick="play()">Video</button>
 		</div>
 		<h2>Static Picture</h2>
 		<p>A professional studio-grade photo of your product to display in House Tipster’s marketplace. Requires shipping of product(s) to our location.</p>
@@ -64,8 +64,30 @@
 
 <script type="text/javascript">
 $("#video_button").click(function() {
-  $(".hideLeftStaticPicture, .hideMiddleStaticPicture").toggle({display: 'hidden'});
+  // $(".hideLeftStaticPicture, .hideMiddleStaticPicture").toggle({display: 'hidden'});
+  $(".hideLeftStaticPicture, .hideMiddleStaticPicture").fadeOut(1000, function() {
+  	$(".hideLeftStaticPicture, .hideMiddleStaticPicture").hide();
+  });
 });
+
+$("#main_view_button").click(function() {
+  $(".hideLeftStaticPicture, .hideMiddleStaticPicture").fadeIn(500);
+});
+
+
+var myVideo = document.getElementById("static_picture_video"); 
+
+function play() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    // else 
+    //     myVideo.pause(); 
+}
+
+function pause() {
+	if (myVideo.play)
+		myVideo.pause();
+}
 </script>
 
 
