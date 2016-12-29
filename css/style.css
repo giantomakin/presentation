@@ -277,7 +277,7 @@ h1{
 }
 .staticPictureSection .productImages {
     height: 100%;
-    padding-right: 0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -557,6 +557,11 @@ h1{
 .sy-list {
     width: 140%;
 }
+
+
+.sy-slide.kenburns {
+    left: -45%;
+}
 /*------------------------------------------------------*/
 
 
@@ -603,9 +608,9 @@ a.right.carousel-control {
     vertical-align: baseline;
     max-width: 1800px;
 }
-.hideLeftStaticPicture {
+/*.hideLeftStaticPicture {
     padding: 15px 25px 15px 15px;
-}
+}*/
 #main_view_button {
     float: left;
 }
