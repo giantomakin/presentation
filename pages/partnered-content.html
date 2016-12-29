@@ -1,9 +1,48 @@
-<div class="col-xs-8 left-section">
+<div class="col-xs-8 video_section">
+	<video id="partnered_content_video" loop width="100%" height="100%">
+		<source src="images/video/tablet_test.mp4" type="video/mp4">
+	</video>
+</div>
+
+
+<div class="col-xs-8 left-section hideLeftPartneredContent">
     <img src="images/Partnered_Content.jpg" class="img-responsive center-block" alt="Partnered_Content">
 </div>
-<div class="col-xs-4 right-section">
+<div class="col-xs-4 right-section" style="float:right;">
     <div>
+    	<div class="switchViewButton">
+			<button class="btn btn-lg" id="main_view_button_partneredContent" onclick="pause6()">Main View</button>
+			<button class="btn btn-lg" id="video_button_partneredContent" onclick="play6()">Video</button>
+		</div>
         <h2>Partnered Content</h2>
         <p>Get even more exposure with a sponsored article or video about your product. Our team of writers and videographers will work you with to create engaging online content that highlights the unique features of your item.</p>
     </div>
 </div>
+
+
+
+
+<script type="text/javascript">
+$("#video_button_partneredContent").click(function() {
+	$(".hideLeftPartneredContent").fadeOut(1000, function() {
+		$(".hideLeftPartneredContent").hide();
+	});
+});
+
+$("#main_view_button_partneredContent").click(function() {
+	$(".hideLeftPartneredContent").fadeIn(1000);
+});
+
+
+var myVideo6 = document.getElementById("partnered_content_video"); 
+
+function play6() { 
+	if (myVideo6.paused) 
+		myVideo6.play(); 
+}
+
+function pause6() {
+	if (myVideo6.play)
+		myVideo6.pause();
+}
+</script>

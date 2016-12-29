@@ -95,7 +95,7 @@ footer {
     text-transform: uppercase;
     font-family: 'Roboto Condensed Bold', sans-serif !important;
     font-weight: 600;
-    font-size: 46px;
+    font-size: 40px;
     text-align: center;
     letter-spacing: 2px;
     padding-bottom: 10px;
@@ -120,8 +120,8 @@ footer {
     width: 140px;
     margin: 0 10px;
     padding: 7px;
-    background: #fff;
-    color: grey;
+    background: #f2f2f2;
+    color: #676767;
     border-radius: 15px;
     border-color: #e97925;
     font-family: 'Roboto Condensed';
@@ -167,7 +167,7 @@ footer {
     padding: 40px 0 70px;
 }
 .navbar-nav > li > a {
-    font-size: 25px;
+    font-size: 30px;
     font-family: 'Roboto Condensed', sans-serif;
 }
 .glyphicon-triangle-bottom {
@@ -262,13 +262,13 @@ h1{
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    border: 2px solid #eee;
+    border: 2px solid #f2f2f2;
 }
 
 
 .staticPictureSection .img-responsive {
     height: 100%;
-    /*border: 2px solid #eee;*/
+    /*border: 2px solid #f2f2f2;*/
 }
 
 
@@ -292,7 +292,7 @@ h1{
 .staticPictureSection .imageToggle img {
     height: auto;
     padding: 5px;
-    border: 2px solid #eee;
+    border: 2px solid #f2f2f2;
 }
 
 .staticPictureSection .click_and_drag {
@@ -311,7 +311,7 @@ h1{
     text-shadow: none;
     font-family: 'Roboto Condensed Bold', sans-serif !important;
     font-size: 23px;
-    color: grey;
+    color: #676767;
 }
 
 .staticPictureSection2 .productInfo ul {
@@ -349,7 +349,7 @@ h1{
     display: table-row;
 }*/
 .threeSixtyPhotoRow{
-    /*background-color: #eee;*/
+    /*background-color: #f2f2f2;*/
     bottom: 50px;
     position: absolute;
     width: 100%;
@@ -428,7 +428,7 @@ h1{
 
 .productVisualizer .firstRowTabs a {
     font-size: 23px;
-    color: #777 !important;
+    color: #676767 !important;
     text-shadow: none;
     border: none !important;
     font-family: 'Roboto condensed', sans-serif !important;
@@ -462,8 +462,8 @@ h1{
 }
 .productVisualizer .secondRowTabs a:focus {
     background-color: #e97925 !important;
-    border-left: 3px solid #eee !important;
-    border-right: 3px solid #eee !important;
+    border-left: 3px solid #f2f2f2 !important;
+    border-right: 3px solid #f2f2f2 !important;
 }
 
 
@@ -472,7 +472,7 @@ h1{
 
 
 .productVisualRow{
-    background-color: #eee;
+    background-color: #f2f2f2;
     position: relative;
     width: 100%;
     z-index: 1;
@@ -529,7 +529,7 @@ h1{
 
 
 .threesixty.product, .firstRowTabs {
-    /*border: 2px solid #eee;*/
+    /*border: 2px solid #f2f2f2;*/
     /*padding: 10px 15px;*/
     /*height: 100% !important;*/
     display: table-row;
@@ -543,7 +543,7 @@ h1{
 
 
 .productVisual .secondRowTabs {
-    background-color: grey;
+    background-color: #676767;
 }
 
 /*------------------------------------------------------*/
@@ -628,6 +628,9 @@ a.right.carousel-control {
     .carousel-caption {
         height: calc(100% - 260px);
     }
+     .navbar-nav > li > a {
+        line-height: 30px;
+    }
 }
 @media screen and (max-width: 1400px) {
 
@@ -652,12 +655,13 @@ a.right.carousel-control {
 
 
 
+
     .carousel, .item, .active {
         padding: 0 25px;
     }
 
     .navbar-nav > li > a {
-        font-size: 15px;
+        font-size: 18px;
     }
 
 }
@@ -673,7 +677,7 @@ a.right.carousel-control {
         font-size: 20px;
     }
     .navbar-nav > li > a {
-        font-size: 20px;
+        font-size: 22px;
     }
 
 }

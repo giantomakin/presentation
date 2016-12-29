@@ -1,7 +1,7 @@
 <div class="col-xs-8 video_section">
 	<video id="product_render_video" loop width="100%" height="100%">
-			<source src="images/video/tablet_test.mp4" type="video/mp4">
-		</video>
+		<source src="images/video/tablet_test.mp4" type="video/mp4">
+	</video>
 </div>
 
 
@@ -21,8 +21,8 @@
 <div class="col-xs-4 right-section" style="float:right;">
     <div>
     	<div class="switchViewButton">
-			<button class="btn btn-lg" id="main_view_button_productRender" onclick="pause()">Main View</button>
-			<button class="btn btn-lg" id="video_button_productRender" onclick="play()">Video</button>
+			<button class="btn btn-lg" id="main_view_button_productRender" onclick="pause2()">Main View</button>
+			<button class="btn btn-lg" id="video_button_productRender" onclick="play2()">Video</button>
 		</div>
         <h2>Product Render</h2>
         <p>A stunning render produced with a premier 3D scanner, which is able to display various colors options of the same product from just one scan. This 3D visualization is the recommended choice for multi-finish products.</p>
@@ -39,18 +39,18 @@ $("#video_button_productRender").click(function() {
 });
 
 $("#main_view_button_productRender").click(function() {
-  $(".hideLeftProductRender, .hideMiddleProductRender").fadeIn(500);
+  $(".hideLeftProductRender, .hideMiddleProductRender").fadeIn(1000);
 });
 
 
 var myVideo2 = document.getElementById("product_render_video"); 
 
-function play() { 
+function play2() { 
     if (myVideo2.paused) 
         myVideo2.play(); 
 }
 
-function pause() {
+function pause2() {
 	if (myVideo2.play)
 		myVideo2.pause();
 }
