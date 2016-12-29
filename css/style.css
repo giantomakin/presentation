@@ -309,7 +309,7 @@ h1{
 }
 .staticPictureSection2 .productInfo {
     text-shadow: none;
-    font-family: 'Roboto Condensed', sans-serif !important;
+    font-family: 'Roboto Condensed Bold', sans-serif !important;
     font-size: 23px;
     color: grey;
 }
@@ -635,6 +635,9 @@ a.right.carousel-control {
     .right-section p {
         font-size: 18px;
     }
+    .staticPictureSection2 .productInfo {
+        font-size: 15px;
+    }
     .right-section button {
         font-size: 18px;
         width: 100px;
@@ -643,9 +646,7 @@ a.right.carousel-control {
     }
 
 
-    .staticPictureSection2 .productInfo img {
-        padding: 0px;
-    }
+
     .carousel, .item, .active {
         padding: 0 25px;
     }
@@ -663,6 +664,9 @@ a.right.carousel-control {
     .right-section p {
         font-size: 22px;
     }
+    .staticPictureSection2 .productInfo {
+        font-size: 20px;
+    }
     .navbar-nav > li > a {
         font-size: 20px;
     }
@@ -677,9 +681,21 @@ a.right.carousel-control {
     .right-section p {
         font-size: 15px;
     }
+    .staticPictureSection2 .productInfo {
+        font-size: 13px;
+    }
+    .right-section  .switchViewButton {
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
 }
 
+@media screen and (max-width: 800px) {
 
+}
 
 @media screen and (max-width: 1900px) {
     .staticPictureSection2 .productInfo img {
