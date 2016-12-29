@@ -552,10 +552,10 @@ h1{
 
 /*--------------Virtual Room Section-------------------*/
 .sy-slides-crop {
-    height: 170%;
+    /*height: 170%;*/
 }
 .sy-list {
-    width: 140%;
+    width: 118%;
 }
 
 
@@ -611,9 +611,9 @@ a.right.carousel-control {
 /*.hideLeftStaticPicture {
     padding: 15px 25px 15px 15px;
 }*/
-#main_view_button {
+/*#main_view_button {
     float: left;
-}
+}*/
 
 
 
