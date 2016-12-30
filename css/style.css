@@ -99,11 +99,14 @@ footer {
     text-align: center;
     letter-spacing: 2px;
     padding-bottom: 10px;
+    width: 85%;
+    margin: 10px auto;
 }
 .right-section p {
     font-size: 32px;
     font-family: 'Roboto Condensed', sans-serif !important;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    line-height: 40px;
     -webkit-hyphens: auto !important;
     -ms-hyphens: auto !important;
     hyphens: auto !important;
@@ -642,6 +645,8 @@ a.right.carousel-control {
     }
     .right-section p {
         font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 1px;
     }
     .staticPictureSection2 .productInfo {
         font-size: 15px;
@@ -666,12 +671,14 @@ a.right.carousel-control {
 
 }
 
-@media screen and (min-width: 1400px) and (max-width: 1750px) {
+@media screen and (min-width: 1401px) and (max-width: 1750px) {
     .right-section h2 {
         font-size: 36px;
     }
     .right-section p {
         font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 1px;
     }
     .staticPictureSection2 .productInfo {
         font-size: 20px;
@@ -689,6 +696,8 @@ a.right.carousel-control {
     }
     .right-section p {
         font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 1px;
     }
     .staticPictureSection2 .productInfo {
         font-size: 13px;
