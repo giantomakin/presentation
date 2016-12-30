@@ -46,7 +46,19 @@ app.controller('mainController', function($scope, $browser) {
 				staticColors("G");
 			break;
 			case 4:
-				staticColors("R");
+				console.log('aa');
+			break;
+			case 5:
+				switchVisualizer('assets/fabric/blue/');
+			break;
+			case 6:
+				switchVisualizer('assets/fabric/white/');
+			break;
+			case 7:
+				switchVisualizer('assets/fabric/gray/');
+			break;
+			case 8:
+				switchVisualizer('assets/fabric/brown/');
 			break;
 		}
 	}
@@ -104,6 +116,25 @@ app.controller('mainController', function($scope, $browser) {
 		  $(this).load(function() { $(this).fadeIn(500); });
 		  $(this).attr("src", "images/fabric/"+color+".png");
 		});
+	}
+
+	function switchVisualizer(color)
+	{
+		$('.threesixty_images').empty();
+		$('.product').ThreeSixty({
+		      totalFrames: 73, // Total no. of image you have for 360 slider
+		      endFrame: 73, // end frame for the auto spin animation
+		      currentFrame: 1, // This the start frame for auto spin
+		      imgList: '.threesixty_images', // selector for image list
+		      progress: '.spinner', // selector to show the loading progress
+		      imagePath: color, // path of the image assets
+		      filePrefix: '', // file prefix if any
+		      ext: '.png', // extention for the assets
+		      height: 1000,
+		      width: 447,
+		      navigation: false,
+		      responsive: true
+		  });
 	}
  });
 
