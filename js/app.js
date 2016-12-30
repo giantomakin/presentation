@@ -130,7 +130,7 @@ app.controller('mainController', function($scope, $browser) {
 		      progress: '.spinner', // selector to show the loading progress
 		      imagePath: color, // path of the image assets
 		      filePrefix: '', // file prefix if any
-		      ext: '.png', // extention for the assets
+		      ext: '.jpg', // extention for the assets
 		      height: 1000,
 		      width: 447,
 		      navigation: false,
