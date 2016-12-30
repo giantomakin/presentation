@@ -89,27 +89,28 @@ footer {
 
     text-shadow: none;
     text-align: justify;
-    padding: 3%;
+    padding: 4%;
 }
 .right-section h2 {
     text-transform: uppercase;
-    font-family: 'Roboto Condensed Bold', sans-serif !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 46px;
     text-align: center;
     letter-spacing: 2px;
     padding-bottom: 10px;
-    width: 85%;
+    width: 90%;
     margin: 10px auto;
 }
 .right-section p {
     font-size: 32px;
     font-family: 'Roboto Condensed', sans-serif !important;
-    letter-spacing: 2px;
-    line-height: 40px;
+    letter-spacing: 1px;
+    line-height: 38px;
     -webkit-hyphens: auto !important;
     -ms-hyphens: auto !important;
     hyphens: auto !important;
+    word-spacing: 0px;
 }
 
 .right-section .switchViewButton {
@@ -170,7 +171,8 @@ footer {
     padding: 40px 0 70px;
 }
 .navbar-nav > li > a {
-    font-size: 30px;
+    font-size: 25px;
+    color: #676767;
     font-family: 'Roboto Condensed', sans-serif;
 }
 .glyphicon-triangle-bottom {
@@ -312,7 +314,7 @@ h1{
 }
 .staticPictureSection2 .productInfo {
     text-shadow: none;
-    font-family: 'Roboto Condensed Bold', sans-serif !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
     font-size: 23px;
     color: #676767;
 }
@@ -645,8 +647,9 @@ a.right.carousel-control {
     }
     .right-section p {
         font-size: 18px;
-        line-height: 26px;
+        line-height: 20px;
         letter-spacing: 1px;
+        word-spacing: 1px;
     }
     .staticPictureSection2 .productInfo {
         font-size: 15px;
@@ -677,7 +680,7 @@ a.right.carousel-control {
     }
     .right-section p {
         font-size: 22px;
-        line-height: 32px;
+        line-height: 28px;
         letter-spacing: 1px;
     }
     .staticPictureSection2 .productInfo {
