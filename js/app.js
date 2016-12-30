@@ -134,7 +134,8 @@ app.controller('mainController', function($scope, $browser) {
 		      height: 1000,
 		      width: 447,
 		      navigation: false,
-		      responsive: true
+		      responsive: true,
+		      disableSpin: true
 		  });
 	}
  });
