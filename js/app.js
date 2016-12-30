@@ -76,6 +76,7 @@ app.controller('mainController', function($scope, $browser) {
 	myCarousel.bind('slide.bs.carousel', function (e) {
 		var id = $(e.relatedTarget).data('target-id');
 	    clearActiveSlides();
+	    console.log(id);
 	    $("#"+id).addClass("itemSelected");
 	    $("#"+id).prev().addClass("makeVisible");
 	});
@@ -120,8 +121,8 @@ app.controller('mainController', function($scope, $browser) {
 
 	function switchVisualizer(color)
 	{
-		$('.threesixty_images').empty();
-		$('.product').ThreeSixty({
+		$('.ts').empty();
+		$('.productrender').ThreeSixty({
 		      totalFrames: 73, // Total no. of image you have for 360 slider
 		      endFrame: 73, // end frame for the auto spin animation
 		      currentFrame: 1, // This the start frame for auto spin

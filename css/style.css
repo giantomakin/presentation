@@ -539,11 +539,18 @@ h1{
     /*height: 100% !important;*/
     display: table-row;
 }
+
+.threesixty.productrender, .firstRowTabs {
+    /*border: 2px solid #f2f2f2;*/
+    /*padding: 10px 15px;*/
+    /*height: 100% !important;*/
+    display: table-row;
+}
 .threesixty .threesixty_images img.current-image {
     width: 85%;
 }
 .threesixty .threesixty_images img {
-    left: 8%; 
+    left: 8%;
 }
 
 
@@ -721,5 +728,5 @@ a.right.carousel-control {
 @media screen and (max-width: 1900px) {
     .staticPictureSection2 .productInfo img {
         width: 100%;
-    }   
+    }
 }
