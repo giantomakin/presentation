@@ -548,6 +548,7 @@ h1{
 }
 .threesixty .threesixty_images img.current-image {
     width: 85%;
+    transform: rotate(-2deg);
 }
 .threesixty .threesixty_images img {
     left: 8%;
