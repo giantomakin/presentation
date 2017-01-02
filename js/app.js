@@ -46,7 +46,7 @@ app.controller('mainController', function($scope, $browser) {
 				staticColors("G");
 			break;
 			case 4:
-				console.log('aa');
+				staticColors("R");
 			break;
 			case 5:
 				switchVisualizer('assets/fabric/blue/');
