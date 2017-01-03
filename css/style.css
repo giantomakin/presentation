@@ -533,19 +533,6 @@ h1{
 }
 
 
-.threesixty.product, .firstRowTabs {
-    /*border: 2px solid #f2f2f2;*/
-    /*padding: 10px 15px;*/
-    /*height: 100% !important;*/
-    display: table-row;
-}
-
-.threesixty.productrender, .firstRowTabs {
-    /*border: 2px solid #f2f2f2;*/
-    /*padding: 10px 15px;*/
-    /*height: 100% !important;*/
-    display: table-row;
-}
 .threesixty .threesixty_images img.current-image {
     width: 85%;
 }

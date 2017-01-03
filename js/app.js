@@ -131,7 +131,7 @@ app.controller('mainController', function($scope, $browser) {
 		      imagePath: color, // path of the image assets
 		      filePrefix: '', // file prefix if any
 		      ext: '.jpg', // extention for the assets
-		      height: 1000,
+		      height: 450,
 		      width: 447,
 		      disableSpin: true
 		  });
