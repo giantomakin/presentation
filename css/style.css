@@ -582,17 +582,17 @@ a.right.carousel-control {
     top: 40%;
     background: none;
 }
-.carousel-control .glyphicon-chevron-right {
+.carousel-control .glyphicon-menu-right {
     margin-right: 10px;
 }
-.carousel-control .glyphicon-chevron-left {
+.carousel-control .glyphicon-menu-left {
     margin-left: 0px;
 }
-.carousel-control .glyphicon-chevron-right:hover, .carousel-control .glyphicon-chevron-left:hover {
+.carousel-control .glyphicon-menu-right:hover, .carousel-control .glyphicon-menu-left:hover {
     color: #e97925;
 }
 
-.glyphicon-chevron-right, .glyphicon-chevron-left {
+.glyphicon-menu-right, .glyphicon-menu-left {
     font-size: 40px !important;
 }
 
@@ -663,11 +663,11 @@ a.right.carousel-control {
     }
 
     a.right.carousel-control {
-        width: 50px;
+        width: 80px;
         height: 50px;
     }
     a.left.carousel-control {
-        width: 50px;
+        width: 90px;
         height: 50px;
     }
     .navbar-nav {
