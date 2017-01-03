@@ -1,79 +1,93 @@
 <div class="col-xs-8 video_section">
-	<video id="static_picture_video" loop muted width="100%" height="100%">
-		<source src="images/video/new_test2.mp4" type="video/mp4">
+	<video id="threesixty_photo_video" loop muted width="100%" height="100%">
+		<source src="images/video/360_photography.mp4" type="video/mp4">
 	</video>
 </div>
 
-<div class="col-xs-5 left-section hideLeftStaticPicture">
-	<div class="staticPictureSection" style="border: 0;">
-		<div class="col-xs-12 productImages" style="justify-content: space-between;">
-			<div class="col-xs-12 singleImage"><img src="images/static/main_image_W.png" class="img-responsive center-block" id="static-img-m" alt="Static_Picture" style="border: 2px solid #eee; object-fit: contain; height: 115% !important;"></div>
-			<div class="imageToggle col-xs-12">
-				<div class="col-xs-3"><a href="#"><img id="static-img-1" src="images/static/1_W.png"></a></div>
-				<div class="col-xs-3"><a href="#"><img id="static-img-2" src="images/static/2_W.png"></a></div>
-				<div class="col-xs-3"><a href="#"><img id="static-img-3" src="images/static/3.png"></a></div>
-				<div class="col-xs-3"><a href="#"><img id="static-img-4" src="images/static/4_W.png"></a></div>
+
+<div class="col-xs-5 left-section hideLeftThreeSixtyPhoto">
+	<div class="staticPictureSection">
+		<div class="col-xs-12 productImages">
+
+			<div class="col-xs-12 singleImage" style="height: 70%;">
+
+				<div class="productVisualizer">
+					<div class="threesixty product">
+						<div class="spinner">
+							<span>0%</span>
+						</div>
+						<ol class="threesixty_images" id="three-sixty-p" style="text-align: justify;"></ol>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="click_and_drag">
+				<img src="images/click_n_drag.png" style="max-width: 100px; padding-bottom: 5px;">
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="col-xs-3 middle-section hideMiddleStaticPicture">
-	<div class="staticPictureSection2">
-			<div class="col-xs-12 productInfo" style="text-align: left !important;">
-
-				<img src="images/product_name_content.png">
-
-					<p>Available Colors</p>
-					<ul class="availableColorsList">
-						<li><a href="#" style="background-color: #2f3349;" data-static="1" data-color="1" ng-click="pickPallete($event)">&nbsp;</a></li>
-						<li><a href="#" style="background-color: #eae9e5;" data-static="2" data-color="2" ng-click="pickPallete($event)">&nbsp;</a></li>
-						<li><a href="#" style="background-color: #3f4339;" data-static="3" data-color="3" ng-click="pickPallete($event)">&nbsp;</a></li>
-						<li><a href="#" style="background-color: #572828;" data-static="4" data-color="4" ng-click="pickPallete($event)">&nbsp;</a></li>
-					</ul>
-			</div>
-		</div>
-
-</div>
-
+<div class="col-xs-3 middle-section hideMiddleThreeSixtyPhoto" ng-include="'pages/templates/middle-section.html'"></div>
 
 <div class="col-xs-4 right-section" style="float:right;">
 	<div>
 		<div class="switchViewButton">
-			<button class="btn btn-lg" id="main_view_button_staticPicture" onclick="pause()">Main View</button>
-			<button class="btn btn-lg" id="video_button_staticPicture" onclick="play()">Video</button>
+			<button class="btn btn-lg" id="main_view_button_threeSixtyPhoto" onclick="pause3()">Main View</button>
+			<button class="btn btn-lg" id="video_button_threeSixtyPhoto" onclick="play3()">Video</button>
 		</div>
-		<h2>Static Picture</h2>
-		<p>A professional studio-grade photo of your product to display in House Tipster’s marketplace. Requires shipping of product(s) to our location.</p>
+		<h2>360&deg; Photography</h2>
+		<p>360&deg; photography allows users to examine an object by rotating and tilting the object to provide a full 360° view. This is perfect for couches, tables, and other home good that would be placed in the center of a room. Recommended for products that have one specific color.</p>
 	</div>
 </div>
 
+<script>
+$(document).ready(function(){
+	$('.product').ThreeSixty({
+	      totalFrames: 52, // Total no. of image you have for 360 slider
+	      endFrame: 52, // end frame for the auto spin animation
+	      currentFrame: 1, // This the start frame for auto spin
+	      imgList: '.threesixty_images', // selector for image list
+	      progress: '.spinner', // selector to show the loading progress
+	      imagePath: 'assets/product/', // path of the image assets
+	      filePrefix: '', // file prefix if any
+	      ext: '.png', // extention for the assets
+	      height: 1000,
+	      width: 447,
+	      disableSpin: true
+	  });
+
+});
 
 
 
-
-
-<script type="text/javascript">
-$("#video_button_staticPicture").click(function() {
-  $(".hideLeftStaticPicture, .hideMiddleStaticPicture").fadeOut(1000, function() {
-  	$(".hideLeftStaticPicture, .hideMiddleStaticPicture").hide();
+$("#video_button_threeSixtyPhoto").click(function() {
+  $(".hideLeftThreeSixtyPhoto, .hideMiddleThreeSixtyPhoto").fadeOut(1000, function() {
+  	$(".hideLeftThreeSixtyPhoto, .hideMiddleThreeSixtyPhoto").hide();
   });
 });
 
-$("#main_view_button_staticPicture").click(function() {
-  $(".hideLeftStaticPicture, .hideMiddleStaticPicture").fadeIn(1000);
+$("#main_view_button_threeSixtyPhoto").click(function() {
+  $(".hideLeftThreeSixtyPhoto, .hideMiddleThreeSixtyPhoto").fadeIn(1000);
 });
 
 
-var myVideo = document.getElementById("static_picture_video"); 
+var myVideo3 = document.getElementById("threesixty_photo_video");
 
-function play() { 
-    if (myVideo.paused) 
-        myVideo.play(); 
+function play3() {
+    if (myVideo3.paused)
+        myVideo3.play();
 }
 
-function pause() {
-	if (myVideo.play)
-		myVideo.pause();
+function pause3() {
+	if (myVideo3.play)
+		myVideo3.pause();
 }
+
+
 </script>
+
+
+
+
