@@ -573,13 +573,13 @@ h1{
 a.left.carousel-control {
     width: 100px;
     height: 100px;
-    top: 40%;
+    top: 45%;
     background: none;
 }
 a.right.carousel-control {
     width: 100px;
     height: 100px;
-    top: 40%;
+    top: 45%;
     background: none;
 }
 .carousel-control .glyphicon-menu-right {
