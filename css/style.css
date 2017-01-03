@@ -605,7 +605,7 @@ a.right.carousel-control {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 15px;
+    padding: 45px;
 }
 .video {
     display: inline-block;
