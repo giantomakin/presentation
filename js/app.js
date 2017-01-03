@@ -133,8 +133,7 @@ app.controller('mainController', function($scope, $browser) {
 		      ext: '.jpg', // extention for the assets
 		      height: 1000,
 		      width: 447,
-		      navigation: false,
-		      responsive: true,
+		      framerate:50,
 		      disableSpin: true
 		  });
 	}
