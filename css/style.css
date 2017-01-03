@@ -763,6 +763,7 @@ a.right.carousel-control {
 
 .col-xs-8.left-section.hideLeftPartneredContent.ng-scope > img {
     width: 100%;
+    top: 0;
     left: 0;
     padding: 45px;
 }
