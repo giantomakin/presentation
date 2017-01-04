@@ -789,6 +789,7 @@ a.btn-floating.display-left {
     left: 70px;
     font-size: 40px;
     text-decoration: none;
+    color: #ffffff;
 }
 a.btn-floating.display-right {
     position: absolute;
@@ -796,4 +797,5 @@ a.btn-floating.display-right {
     right: 70px;
     font-size: 40px;
     text-decoration: none;
+    color: #ffffff;
 }
