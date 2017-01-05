@@ -799,3 +799,7 @@ a.btn-floating.display-right {
     text-decoration: none;
     color: #ffffff;
 }
+
+.productrender2 img {
+    object-fit: contain;
+}
