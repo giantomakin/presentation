@@ -143,7 +143,7 @@ app.controller('mainController', function($scope, $browser) {
 		      currentFrame: 1, // This the start frame for auto spin
 		      imgList: '.threesixty_images', // selector for image list
 		      progress: '.spinner', // selector to show the loading progress
-		      imagePath: 'assets/fabric/blue/', // path of the image assets
+		      imagePath: 'assets/shower/white/', // path of the image assets
 		      filePrefix: '', // file prefix if any
 		      ext: '.jpg', // extention for the assets
 		      height: 450,
