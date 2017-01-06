@@ -9,7 +9,7 @@
 	<div class="staticPictureSection" style="position: relative;">
 
 		<div class="" style="position: relative; display: flex; flex-direction: column; justify-content; center;height: 70%;">
-			  	<div class="mySlides">
+			  	<div class="mySlides" id="fabric-slide">
 			  		<div class="productImages">
 						<div class="singleImage" style="height: 70%;">
 							<div class="productVisualizer">
@@ -24,7 +24,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="mySlides">
+				<div class="mySlides" id="shower-slide">
 			  		<div class="productImages">
 						<div class="singleImage" style="height: 70%;">
 							<div class="productVisualizer">
@@ -40,7 +40,7 @@
 				</div>
 		</div>
 
-		<div class="click_and_drag">
+			<div class="click_and_drag">
 				<img src="images/click_n_drag.png" style="max-width: 100px; padding-bottom: 5px;">
 			</div>
 	</div>
@@ -52,7 +52,7 @@
 	<div class="staticPictureSection2">
 		<div class="col-xs-12 productInfo" style="text-align: left !important;">
 
-			<img src="images/tuscan_highchair.png">
+			<img id="product-visualization-info" src="images/tuscan_highchair.png">
 
 			<p>Available Colors</p>
 			<ul class="availableColorsList">
@@ -138,17 +138,29 @@ var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
+	checkSlide();
   showDivs(slideIndex += n);
 }
 
+function checkSlide()
+{
+	if($('#fabric-slide').attr('style') == 'display: block;')
+	{
+		$('#product-visualization-info').attr("src", "images/tuscan_bathtub.png");
+	}else {
+		$('#product-visualization-info').attr("src", "images/tuscan_highchair.png");
+	}
+
+}
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
   if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
+  if (n < 1) {slideIndex = x.length;}
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";
   }
   x[slideIndex-1].style.display = "block";
+
 }
 </script>

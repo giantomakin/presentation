@@ -50,16 +50,16 @@ app.controller('mainController', function($scope, $browser) {
 				staticColors("R");
 			break;
 			case 5:
-				switchVisualizer('assets/fabric/blue/');
+				switchVisualizer('blue/');
 			break;
 			case 6:
-				switchVisualizer('assets/fabric/white/');
+				switchVisualizer('white/');
 			break;
 			case 7:
-				switchVisualizer('assets/fabric/gray/');
+				switchVisualizer('grey/');
 			break;
 			case 8:
-				switchVisualizer('assets/fabric/brown/');
+				switchVisualizer('brown/');
 			break;
 		}
 	}
@@ -129,7 +129,7 @@ app.controller('mainController', function($scope, $browser) {
 		      currentFrame: 1, // This the start frame for auto spin
 		      imgList: '.threesixty_images', // selector for image list
 		      progress: '.spinner', // selector to show the loading progress
-		      imagePath: color, // path of the image assets
+		      imagePath: 'assets/fabric/' + color, // path of the image assets
 		      filePrefix: '', // file prefix if any
 		      ext: '.jpg', // extention for the assets
 		      height: 450,
@@ -138,12 +138,12 @@ app.controller('mainController', function($scope, $browser) {
 		  });
 
 			$('.productrender2').ThreeSixty({
-		      totalFrames: 73, // Total no. of image you have for 360 slider
-		      endFrame: 73, // end frame for the auto spin animation
+		      totalFrames: 72, // Total no. of image you have for 360 slider
+		      endFrame: 72, // end frame for the auto spin animation
 		      currentFrame: 1, // This the start frame for auto spin
 		      imgList: '.threesixty_images', // selector for image list
 		      progress: '.spinner', // selector to show the loading progress
-		      imagePath: 'assets/shower/white/', // path of the image assets
+		      imagePath: 'assets/shower/' + color, // path of the image assets
 		      filePrefix: '', // file prefix if any
 		      ext: '.jpg', // extention for the assets
 		      height: 450,
