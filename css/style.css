@@ -771,35 +771,38 @@ a.right.carousel-control {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 a.btn-floating.display-left {
     position: absolute;
     top: 50%;
     left: 70px;
-    font-size: 40px;
+    font-size: 26px;
     text-decoration: none;
     color: #ffffff;
+    width: 36px;
+    height: 36px;
+    background-color: #F2F2F2;
+    text-shadow: none;
+
 }
 a.btn-floating.display-right {
     position: absolute;
     top: 50%;
     right: 70px;
-    font-size: 40px;
+    font-size: 26px;
     text-decoration: none;
     color: #ffffff;
+    width: 36px;
+    height: 36px;
+    background-color: #F2F2F2;
+    text-shadow: none;
+
+
 }
 
 .productrender2 img {
     object-fit: contain;
+}
+
+.display-right:hover, .display-left:hover {
+	color:#e97925 !important;
 }
