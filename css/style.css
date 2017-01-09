@@ -341,8 +341,12 @@ h1{
     border: 2px solid #ccc;
     text-decoration: none;
 }
-.availableColorsList li a:hover {
+.availableColorsList li a:hover{
 	text-decoration: none !important;
+	border: 2px solid #E97925 !important;
+}
+.availableColorsList li a.active{
+	border: 2px solid #E97925 !important;
 }
 .boxedWithInfo {
     border: 1px solid #ccc;

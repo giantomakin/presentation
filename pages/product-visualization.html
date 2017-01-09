@@ -38,6 +38,20 @@
 						</div>
 					</div>
 				</div>
+					<div class="mySlides" id="chair-slide">
+				  		<div class="productImages">
+							<div class="singleImage" style="height: 70%;">
+								<div class="productVisualizer">
+									<div class="threesixty productrender3">
+										<div class="spinner">
+											<span>0%</span>
+										</div>
+										<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 		</div>
 
 			<div class="click_and_drag">
@@ -55,11 +69,25 @@
 			<img id="product-visualization-info" src="images/tuscan_highchair.png">
 
 			<p>Available Colors</p>
-			<ul class="availableColorsList">
+			<ul class="availableColorsList" id="product-visualization-fabric-colors">
 			<li><a href="#" style="background-color: #2f3349;" data-color="5" ng-click="pickPallete($event)">&nbsp;</a></li>
-				<li><a href="#" style="background-color: #eae9e5;" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
+				<li><a href="#" class="active" style="background-color: #eae9e5;" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
 				<li><a href="#" style="background-color: #7a736d;" data-color="7" ng-click="pickPallete($event)">&nbsp;</a></li>
 				<li><a href="#" style="background-color: #572828;" data-color="8" ng-click="pickPallete($event)">&nbsp;</a></li>
+			</ul>
+
+			<ul class="availableColorsList" id="product-visualization-shower-colors" hidden>
+			<li><a href="#" style="background-color: #8e8b91;" data-color="5" ng-click="pickPallete($event)">&nbsp;</a></li>
+				<li><a href="#" class="active" style="background-color: #eae9e5;" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
+				<li><a href="#" style="background-color: #7a736d;" data-color="7" ng-click="pickPallete($event)">&nbsp;</a></li>
+				<li><a href="#" style="background-color: #572828;" data-color="8" ng-click="pickPallete($event)">&nbsp;</a></li>
+			</ul>
+
+			<ul class="availableColorsList" id="product-visualization-chair-colors" hidden>
+			<li><a href="#" style="background-color: #262427;" data-color="5" ng-click="pickPallete($event)">&nbsp;</a></li>
+				<li><a href="#" class="active" style="background-color: #fcf7fd;" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
+				<li><a href="#" style="background-color: #554c4f;" data-color="7" ng-click="pickPallete($event)">&nbsp;</a></li>
+				<li><a href="#" style="background-color: #4e1b22;" data-color="8" ng-click="pickPallete($event)">&nbsp;</a></li>
 			</ul>
 		</div>
 	</div>
@@ -85,7 +113,7 @@ $(document).ready(function(){
 	      currentFrame: 1, // This the start frame for auto spin
 	      imgList: '.threesixty_images', // selector for image list
 	      progress: '.spinner', // selector to show the loading progress
-	      imagePath: 'assets/fabric/white/', // path of the image assets
+	      imagePath: 'assets/fabric/2/', // path of the image assets
 	      filePrefix: '', // file prefix if any
 	      ext: '.jpg', // extention for the assets
 	      height: 450,
@@ -93,12 +121,25 @@ $(document).ready(function(){
 	      disableSpin: true
 	  });
 		$('.productrender2').ThreeSixty({
+	      totalFrames: 72, // Total no. of image you have for 360 slider
+	      endFrame: 72, // end frame for the auto spin animation
+	      currentFrame: 1, // This the start frame for auto spin
+	      imgList: '.threesixty_images', // selector for image list
+	      progress: '.spinner', // selector to show the loading progress
+	      imagePath: 'assets/shower/2/', // path of the image assets
+	      filePrefix: '', // file prefix if any
+	      ext: '.jpg', // extention for the assets
+	      height: 450,
+	      width: 447,
+	      disableSpin: true
+	  });
+		$('.productrender3').ThreeSixty({
 	      totalFrames: 73, // Total no. of image you have for 360 slider
 	      endFrame: 73, // end frame for the auto spin animation
 	      currentFrame: 1, // This the start frame for auto spin
 	      imgList: '.threesixty_images', // selector for image list
 	      progress: '.spinner', // selector to show the loading progress
-	      imagePath: 'assets/shower/white/', // path of the image assets
+	      imagePath: 'assets/chair/2/', // path of the image assets
 	      filePrefix: '', // file prefix if any
 	      ext: '.jpg', // extention for the assets
 	      height: 450,
@@ -138,19 +179,32 @@ var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
-	checkSlide();
   showDivs(slideIndex += n);
 }
 
-function checkSlide()
+function checkSlide(n)
 {
-	if($('#fabric-slide').attr('style') == 'display: block;')
+	switch(n)
 	{
-		$('#product-visualization-info').attr("src", "images/tuscan_bathtub.png");
-	}else {
-		$('#product-visualization-info').attr("src", "images/tuscan_highchair.png");
+		case 0:
+			$('#product-visualization-info').attr("src", "images/tuscan_highchair.png");
+			$('#product-visualization-fabric-colors').show();
+			$('#product-visualization-shower-colors').hide();
+			$('#product-visualization-chair-colors').hide();
+		break;
+		case 1:
+			$('#product-visualization-info').attr("src", "images/tuscan_bathtub.png");
+			$('#product-visualization-shower-colors').show();
+			$('#product-visualization-fabric-colors').hide();
+			$('#product-visualization-chair-colors').hide();
+		break;
+		case 2:
+			$('#product-visualization-info').attr("src", "images/luxury_office_chair.png");
+			$('#product-visualization-shower-colors').hide();
+			$('#product-visualization-fabric-colors').hide();
+			$('#product-visualization-chair-colors').show();
+		break;
 	}
-
 }
 function showDivs(n) {
   var i;
@@ -161,6 +215,6 @@ function showDivs(n) {
      x[i].style.display = "none";
   }
   x[slideIndex-1].style.display = "block";
-
+  checkSlide(slideIndex-1);
 }
 </script>

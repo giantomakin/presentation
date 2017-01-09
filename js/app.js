@@ -23,7 +23,8 @@ app.controller('mainController', function($scope, $browser) {
 	$scope.pickPallete = function(e){
 		e.preventDefault();
 		var color = $(e.target).data('color');
-		console.log(color);
+		$('.availableColorsList li a.active').removeClass('active');
+		$(e.target).addClass('active');
 		switch(color){
 			case '#2f3349':
 				renderColors("blue");
@@ -50,16 +51,16 @@ app.controller('mainController', function($scope, $browser) {
 				staticColors("R");
 			break;
 			case 5:
-				switchVisualizer('blue/');
+				switchVisualizer('1/');
 			break;
 			case 6:
-				switchVisualizer('white/');
+				switchVisualizer('2/');
 			break;
 			case 7:
-				switchVisualizer('grey/');
+				switchVisualizer('3/');
 			break;
 			case 8:
-				switchVisualizer('brown/');
+				switchVisualizer('4/');
 			break;
 		}
 	}
@@ -150,6 +151,20 @@ app.controller('mainController', function($scope, $browser) {
 		      width: 447,
 		      disableSpin: true
 		  });
+
+				$('.productrender3').ThreeSixty({
+			      totalFrames: 73, // Total no. of image you have for 360 slider
+			      endFrame: 73, // end frame for the auto spin animation
+			      currentFrame: 1, // This the start frame for auto spin
+			      imgList: '.threesixty_images', // selector for image list
+			      progress: '.spinner', // selector to show the loading progress
+			      imagePath: 'assets/chair/' + color, // path of the image assets
+			      filePrefix: '', // file prefix if any
+			      ext: '.jpg', // extention for the assets
+			      height: 450,
+			      width: 447,
+			      disableSpin: true
+			  });
 
 	}
  });
