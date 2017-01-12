@@ -14,9 +14,11 @@ app.controller('mainController', function($scope, $browser) {
 	$("#a1").prev().addClass("makeVisible");
 
 	$(window).on('resize', function (){
-	  $wHeight = $(window).height();
-	  $item.height($wHeight);
+		$wHeight = $(window).height();
+		$item.height($wHeight);
 	});
+
+	$scope.class = '';
 
 	$scope.baseURL = window.location.pathname;
 
@@ -27,40 +29,40 @@ app.controller('mainController', function($scope, $browser) {
 		$(e.target).addClass('active');
 		switch(color){
 			case '#2f3349':
-				renderColors("blue");
+			renderColors("blue");
 			break;
 			case '#eae9e5':
-				renderColors("white");
+			renderColors("white");
 			break;
 			case '#7a736d':
-				renderColors("default");
+			renderColors("default");
 			break;
 			case '#572828':
-				renderColors("brown");
+			renderColors("brown");
 			break;
 			case 1:
-				staticColors("B");
+			staticColors("B");
 			break;
 			case 2:
-				staticColors("W");
+			staticColors("W");
 			break;
 			case 3:
-				staticColors("G");
+			staticColors("G");
 			break;
 			case 4:
-				staticColors("R");
+			staticColors("R");
 			break;
 			case 5:
-				switchVisualizer('1/');
+			switchVisualizer('1/');
 			break;
 			case 6:
-				switchVisualizer('2/');
+			switchVisualizer('2/');
 			break;
 			case 7:
-				switchVisualizer('3/');
+			switchVisualizer('3/');
 			break;
 			case 8:
-				switchVisualizer('4/');
+			switchVisualizer('4/');
 			break;
 		}
 	}
@@ -77,10 +79,10 @@ app.controller('mainController', function($scope, $browser) {
 
 	myCarousel.bind('slide.bs.carousel', function (e) {
 		var id = $(e.relatedTarget).data('target-id');
-	    clearActiveSlides();
-	    console.log(id);
-	    $("#"+id).addClass("itemSelected");
-	    $("#"+id).prev().addClass("makeVisible");
+		clearActiveSlides();
+		console.log(id);
+		$("#"+id).addClass("itemSelected");
+		$("#"+id).prev().addClass("makeVisible");
 	});
 
 	function clearActiveSlides(){
@@ -92,32 +94,32 @@ app.controller('mainController', function($scope, $browser) {
 	function staticColors(color)
 	{
 		$("#static-img-m").fadeOut(500, function() {
-		  $(this).load(function() { $(this).fadeIn(500); });
-		  $(this).attr("src", "images/static/main_image_"+color+".png");
+			$(this).load(function() { $(this).fadeIn(500); });
+			$(this).attr("src", "images/static/main_image_"+color+".png");
 		});
 		$("#static-img-1").fadeOut(500, function() {
-		  $(this).load(function() { $(this).fadeIn(500); });
-		  $(this).attr("src", "images/static/1_"+color+".png");
+			$(this).load(function() { $(this).fadeIn(500); });
+			$(this).attr("src", "images/static/1_"+color+".png");
 		});
 		$("#static-img-2").fadeOut(500, function() {
-		  $(this).load(function() { $(this).fadeIn(500); });
-		  $(this).attr("src", "images/static/2_"+color+".png");
+			$(this).load(function() { $(this).fadeIn(500); });
+			$(this).attr("src", "images/static/2_"+color+".png");
 		});
 		$("#static-img-3").fadeOut(500, function() {
-		  $(this).load(function() { $(this).fadeIn(500); });
-		  $(this).attr("src", "images/static/3.png");
+			$(this).load(function() { $(this).fadeIn(500); });
+			$(this).attr("src", "images/static/3.png");
 		});
 		$("#static-img-4").fadeOut(500, function() {
-		  $(this).load(function() { $(this).fadeIn(500); });
-		  $(this).attr("src", "images/static/4_"+color+".png");
+			$(this).load(function() { $(this).fadeIn(500); });
+			$(this).attr("src", "images/static/4_"+color+".png");
 		});
 	}
 
 	function renderColors(color)
 	{
 		$("#product-render-image").fadeOut(500, function() {
-		  $(this).load(function() { $(this).fadeIn(500); });
-		  $(this).attr("src", "images/fabric/"+color+".png");
+			$(this).load(function() { $(this).fadeIn(500); });
+			$(this).attr("src", "images/fabric/"+color+".png");
 		});
 	}
 
@@ -138,7 +140,7 @@ app.controller('mainController', function($scope, $browser) {
 		      disableSpin: true
 		  });
 
-			$('.productrender2').ThreeSixty({
+		$('.productrender2').ThreeSixty({
 		      totalFrames: 72, // Total no. of image you have for 360 slider
 		      endFrame: 72, // end frame for the auto spin animation
 		      currentFrame: 1, // This the start frame for auto spin
@@ -152,7 +154,7 @@ app.controller('mainController', function($scope, $browser) {
 		      disableSpin: true
 		  });
 
-				$('.productrender3').ThreeSixty({
+		$('.productrender3').ThreeSixty({
 			      totalFrames: 73, // Total no. of image you have for 360 slider
 			      endFrame: 73, // end frame for the auto spin animation
 			      currentFrame: 1, // This the start frame for auto spin
@@ -167,5 +169,5 @@ app.controller('mainController', function($scope, $browser) {
 			  });
 
 	}
- });
+});
 
