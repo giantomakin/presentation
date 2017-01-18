@@ -196,8 +196,13 @@ $("#main_view_button_productVisual").click(function() {
 });
 
 $("#3rd_button").click(function() {
-  $(".hideMiddleProductVisual").hide();
-  $(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
+  if($(".hideMiddleProductVisual").hasClass("hidden")){
+  	$(".hideMiddleProductVisual").removeClass('hidden').show();
+  	$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
+  }else{
+  	$(".hideMiddleProductVisual").addClass('hidden').hide();
+  	$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
+  }
 });
 
 
