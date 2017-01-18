@@ -52,20 +52,6 @@
 						</div>
 					</div>
 				</div> -->
-				<div class="mySlides" id="toaster-slide">
-					<div class="productImages">
-						<div class="singleImage" style="height: 70%;">
-							<div class="productVisualizer">
-								<div class="threesixty productrender4">
-									<div class="spinner">
-										<span>0%</span>
-									</div>
-									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="mySlides" id="faucetb-slide">
 					<div class="productImages">
 						<div class="singleImage" style="height: 70%;">
@@ -85,6 +71,20 @@
 						<div class="singleImage" style="height: 70%;">
 							<div class="productVisualizer">
 								<div class="threesixty productrender6">
+									<div class="spinner">
+										<span>0%</span>
+									</div>
+									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mySlides" id="toaster-slide">
+					<div class="productImages">
+						<div class="singleImage" style="height: 70%;">
+							<div class="productVisualizer">
+								<div class="threesixty productrender4">
 									<div class="spinner">
 										<span>0%</span>
 									</div>
@@ -334,7 +334,7 @@
 				// $('#product-visualization-fauceta-colors').hide();
 				// $('#product-visualization-chair-colors').show();
 				// break;
-				case 0:
+				case 2:
 				$('#product-visualization-info').attr("src", "images/smeg_slice_toaster.png");
 				// $('#product-visualization-shower-colors').hide();
 				// $('#product-visualization-fabric-colors').hide();
@@ -346,7 +346,7 @@
 				$("#product_visual_video")[0].load();
 				// console.log('change vid here');
 				break;
-				case 1:
+				case 0:
 				$('#product-visualization-info').attr("src", "images/single_handle_faucet_1.png");
 				// $('#product-visualization-shower-colors').hide();
 				// $('#product-visualization-fabric-colors').hide();
@@ -354,8 +354,10 @@
 				$('#product-visualization-toaster-colors').hide();
 				$('#product-visualization-fauceta-colors').hide();
 				$('#product-visualization-faucetb-colors').show();
+				$("#product_visual_video").find("#video-src").attr("src","images/video/product_visualization.mp4");
+				$("#product_visual_video")[0].load();
 				break;
-				case 2:
+				case 1:
 				$('#product-visualization-info').attr("src", "images/single_handle_faucet_2.png");
 				// $('#product-visualization-shower-colors').hide();
 				// $('#product-visualization-fabric-colors').hide();
@@ -363,6 +365,8 @@
 				$('#product-visualization-toaster-colors').hide();
 				$('#product-visualization-faucetb-colors').hide();
 				$('#product-visualization-fauceta-colors').show();
+				$("#product_visual_video").find("#video-src").attr("src","images/video/product_visualization.mp4");
+				$("#product_visual_video")[0].load();
 				break;
 			}
 		}
