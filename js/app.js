@@ -9,8 +9,8 @@ app.controller('mainController', function($scope, $browser) {
     $item.eq(0).addClass('active');
     $item.height($wHeight);
     $item.addClass('full-screen');
-    $("#a4").addClass("itemSelected");
-    $("#a4").prev().addClass("makeVisible");
+    $("#a1").addClass("itemSelected");
+    $("#a1").prev().addClass("makeVisible");
 
     $(window).on('resize', function() {
         $wHeight = $(window).height();
