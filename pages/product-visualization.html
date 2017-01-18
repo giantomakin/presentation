@@ -119,6 +119,7 @@
 		<div class="switchViewButton">
 			<button class="btn btn-lg" id="main_view_button_productVisual" onclick="pause4()">Main View</button>
 			<button class="btn btn-lg" id="video_button_productVisual" onclick="play4()">Video</button>
+			<button class="btn btn-lg" id="3rd_button" onclick="">Full View</button>
 		</div>
 		<h2>Product Visualization</h2>
 		<p>360&deg; product visualizations are the most captivating way to showcase any product. These photorealistic renders feature every angle of an item with options to rotate the product and change patterns, colors, and textures.</p>
@@ -193,6 +194,13 @@ $("#video_button_productVisual").click(function() {
 $("#main_view_button_productVisual").click(function() {
   $(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
 });
+
+$("#3rd_button").click(function() {
+  $(".hideMiddleProductVisual").hide();
+  $(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
+});
+
+
 
 
 var myVideo4 = document.getElementById("product_visual_video");
