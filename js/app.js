@@ -9,8 +9,8 @@ app.controller('mainController', function($scope, $browser) {
     $item.eq(0).addClass('active');
     $item.height($wHeight);
     $item.addClass('full-screen');
-    $("#a1").addClass("itemSelected");
-    $("#a1").prev().addClass("makeVisible");
+    $("#a4").addClass("itemSelected");
+    $("#a4").prev().addClass("makeVisible");
 
     $(window).on('resize', function() {
         $wHeight = $(window).height();
@@ -134,47 +134,47 @@ app.controller('mainController', function($scope, $browser) {
 
     function switchVisualizer(color) {
         $('.ts').empty();
-        // $('.productrender').ThreeSixty({
-        //     totalFrames: 73, // Total no. of image you have for 360 slider
-        //     endFrame: 73, // end frame for the auto spin animation
-        //     currentFrame: 1, // This the start frame for auto spin
-        //     imgList: '.threesixty_images', // selector for image list
-        //     progress: '.spinner', // selector to show the loading progress
-        //     imagePath: 'assets/fabric/' + color, // path of the image assets
-        //     filePrefix: '', // file prefix if any
-        //     ext: '.jpg', // extention for the assets
-        //     height: 450,
-        //     width: 447,
-        //     disableSpin: true
-        // });
+        $('.productrender').ThreeSixty({
+            totalFrames: 73, // Total no. of image you have for 360 slider
+            endFrame: 73, // end frame for the auto spin animation
+            currentFrame: 1, // This the start frame for auto spin
+            imgList: '.threesixty_images', // selector for image list
+            progress: '.spinner', // selector to show the loading progress
+            imagePath: 'assets/fabric/' + color, // path of the image assets
+            filePrefix: '', // file prefix if any
+            ext: '.jpg', // extention for the assets
+            height: 450,
+            width: 447,
+            disableSpin: true
+        });
 
-        // $('.productrender2').ThreeSixty({
-        //     totalFrames: 72, // Total no. of image you have for 360 slider
-        //     endFrame: 72, // end frame for the auto spin animation
-        //     currentFrame: 1, // This the start frame for auto spin
-        //     imgList: '.threesixty_images', // selector for image list
-        //     progress: '.spinner', // selector to show the loading progress
-        //     imagePath: 'assets/shower/' + color, // path of the image assets
-        //     filePrefix: '', // file prefix if any
-        //     ext: '.jpg', // extention for the assets
-        //     height: 450,
-        //     width: 447,
-        //     disableSpin: true
-        // });
+        $('.productrender2').ThreeSixty({
+            totalFrames: 72, // Total no. of image you have for 360 slider
+            endFrame: 72, // end frame for the auto spin animation
+            currentFrame: 1, // This the start frame for auto spin
+            imgList: '.threesixty_images', // selector for image list
+            progress: '.spinner', // selector to show the loading progress
+            imagePath: 'assets/shower/' + color, // path of the image assets
+            filePrefix: '', // file prefix if any
+            ext: '.jpg', // extention for the assets
+            height: 450,
+            width: 447,
+            disableSpin: true
+        });
 
-        // $('.productrender3').ThreeSixty({
-        //     totalFrames: 73, // Total no. of image you have for 360 slider
-        //     endFrame: 73, // end frame for the auto spin animation
-        //     currentFrame: 1, // This the start frame for auto spin
-        //     imgList: '.threesixty_images', // selector for image list
-        //     progress: '.spinner', // selector to show the loading progress
-        //     imagePath: 'assets/chair/' + color, // path of the image assets
-        //     filePrefix: '', // file prefix if any
-        //     ext: '.jpg', // extention for the assets
-        //     height: 450,
-        //     width: 447,
-        //     disableSpin: true
-        // });
+        $('.productrender3').ThreeSixty({
+            totalFrames: 73, // Total no. of image you have for 360 slider
+            endFrame: 73, // end frame for the auto spin animation
+            currentFrame: 1, // This the start frame for auto spin
+            imgList: '.threesixty_images', // selector for image list
+            progress: '.spinner', // selector to show the loading progress
+            imagePath: 'assets/chair/' + color, // path of the image assets
+            filePrefix: '', // file prefix if any
+            ext: '.jpg', // extention for the assets
+            height: 450,
+            width: 447,
+            disableSpin: true
+        });
 
         $('.productrender4').ThreeSixty({
             totalFrames: 73, // Total no. of image you have for 360 slider
