@@ -192,7 +192,16 @@ $("#video_button_productVisual").click(function() {
 });
 
 $("#main_view_button_productVisual").click(function() {
-  $(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
+	if($(".hideMiddleProductVisual").hasClass("hidden")){
+		if($(".hideLeftProductVisual").hasClass("fullWidthLeftSection")){
+			$(".hideLeftProductVisual").removeClass("fullWidthLeftSection");
+			$(".hideMiddleProductVisual").removeClass('hidden').show();
+			$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
+		}
+	}else{
+		$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
+	}
+
 });
 
 $("#3rd_button").click(function() {
