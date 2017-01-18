@@ -1,6 +1,6 @@
 <div class="col-xs-8 video_section">
 	<video id="product_visual_video" loop muted width="100%" height="100%">
-		<source src="images/video/product_visualization.mp4" type="video/mp4">
+		<source id="video-src" src="images/video/product_visualization.mp4" type="video/mp4">
 		</video>
 	</div>
 
@@ -9,7 +9,7 @@
 		<div class="staticPictureSection" style="position: relative;">
 
 			<div class="" style="position: relative; display: flex; flex-direction: column; justify-content; center;height: 70%;">
-				<div class="mySlides" id="fabric-slide">
+<!-- 				<div class="mySlides" id="fabric-slide">
 					<div class="productImages">
 						<div class="singleImage" style="height: 70%;">
 							<div class="productVisualizer">
@@ -51,7 +51,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="mySlides" id="toaster-slide">
 					<div class="productImages">
 						<div class="singleImage" style="height: 70%;">
@@ -80,6 +80,20 @@
 						</div>
 					</div>
 				</div>
+				<div class="mySlides" id="fauceta-slide">
+					<div class="productImages">
+						<div class="singleImage" style="height: 70%;">
+							<div class="productVisualizer">
+								<div class="threesixty productrender6">
+									<div class="spinner">
+										<span>0%</span>
+									</div>
+									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="click_and_drag">
@@ -97,7 +111,7 @@
 				<img id="product-visualization-info" src="images/tuscan_highchair.png">
 
 				<p>Available Colors</p>
-				<ul class="availableColorsList" id="product-visualization-fabric-colors">
+			<!-- 	<ul class="availableColorsList" id="product-visualization-fabric-colors">
 					<li><a href="#" style="background-color: #2f3349;" data-color="5" ng-click="pickPallete($event)">&nbsp;</a></li>
 					<li><a href="#" class="active" style="background-color: #eae9e5;" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
 					<li><a href="#" style="background-color: #7a736d;" data-color="7" ng-click="pickPallete($event)">&nbsp;</a></li>
@@ -116,7 +130,7 @@
 					<li><a href="#" class="active" style="background-color: #fcf7fd;" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
 					<li><a href="#" style="background-color: #554c4f;" data-color="7" ng-click="pickPallete($event)">&nbsp;</a></li>
 					<li><a href="#" style="background-color: #4e1b22;" data-color="8" ng-click="pickPallete($event)">&nbsp;</a></li>
-				</ul>
+				</ul> -->
 				<ul class="availableColorsList" id="product-visualization-toaster-colors" hidden>
 					<li><a href="#" style="background-color: #020202;" data-color="5" ng-click="pickPallete($event)">&nbsp;</a></li>
 					<li><a href="#" class="active" style="background-color: #bfaea6;" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
@@ -125,9 +139,13 @@
 				</ul>
 				<ul class="availableColorsList" id="product-visualization-faucetb-colors" hidden>
 					<li><a href="#" style="background-color: #020202;" data-color="5" ng-click="pickPallete($event)">&nbsp;</a></li>
-					<li><a href="#" class="active" style="background-color: #bfaea6;" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
-					<li><a href="#" style="background-color: #5b87a2;" data-color="7" ng-click="pickPallete($event)">&nbsp;</a></li>
-					<li><a href="#" style="background-color: #710302;" data-color="8" ng-click="pickPallete($event)">&nbsp;</a></li>
+					<li><a href="#" class="active" style="background-color: #fcf7fd;" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
+					<li><a href="#" style="background-color: #B3B5B0;" data-color="7" ng-click="pickPallete($event)">&nbsp;</a></li>
+					<li><a href="#" style="background-color: #9F9B9B;" data-color="8" ng-click="pickPallete($event)">&nbsp;</a></li>
+				</ul>
+				<ul class="availableColorsList" id="product-visualization-fauceta-colors" hidden>
+					<li><a href="#" style="background-color: #B3B5B0;" data-color="5" ng-click="pickPallete($event)">&nbsp;</a></li>
+					<li><a href="#" class="active" style="background-color: #9F9B9B;" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
 				</ul>
 			</div>
 		</div>
@@ -148,45 +166,45 @@
 
 	<script>
 		$(document).ready(function(){
-			$('.productrender').ThreeSixty({
-	      totalFrames: 73, // Total no. of image you have for 360 slider
-	      endFrame: 73, // end frame for the auto spin animation
-	      currentFrame: 1, // This the start frame for auto spin
-	      imgList: '.threesixty_images', // selector for image list
-	      progress: '.spinner', // selector to show the loading progress
-	      imagePath: 'assets/fabric/2/', // path of the image assets
-	      filePrefix: '', // file prefix if any
-	      ext: '.jpg', // extention for the assets
-	      height: 450,
-	      width: 447,
-	      disableSpin: true
-	  });
-			$('.productrender2').ThreeSixty({
-	      totalFrames: 72, // Total no. of image you have for 360 slider
-	      endFrame: 72, // end frame for the auto spin animation
-	      currentFrame: 1, // This the start frame for auto spin
-	      imgList: '.threesixty_images', // selector for image list
-	      progress: '.spinner', // selector to show the loading progress
-	      imagePath: 'assets/shower/2/', // path of the image assets
-	      filePrefix: '', // file prefix if any
-	      ext: '.jpg', // extention for the assets
-	      height: 450,
-	      width: 447,
-	      disableSpin: true
-	  });
-			$('.productrender3').ThreeSixty({
-	      totalFrames: 73, // Total no. of image you have for 360 slider
-	      endFrame: 73, // end frame for the auto spin animation
-	      currentFrame: 1, // This the start frame for auto spin
-	      imgList: '.threesixty_images', // selector for image list
-	      progress: '.spinner', // selector to show the loading progress
-	      imagePath: 'assets/chair/2/', // path of the image assets
-	      filePrefix: '', // file prefix if any
-	      ext: '.jpg', // extention for the assets
-	      height: 450,
-	      width: 447,
-	      disableSpin: true
-	  });
+			// $('.productrender').ThreeSixty({
+	  //     totalFrames: 73, // Total no. of image you have for 360 slider
+	  //     endFrame: 73, // end frame for the auto spin animation
+	  //     currentFrame: 1, // This the start frame for auto spin
+	  //     imgList: '.threesixty_images', // selector for image list
+	  //     progress: '.spinner', // selector to show the loading progress
+	  //     imagePath: 'assets/fabric/2/', // path of the image assets
+	  //     filePrefix: '', // file prefix if any
+	  //     ext: '.jpg', // extention for the assets
+	  //     height: 450,
+	  //     width: 447,
+	  //     disableSpin: true
+	  // });
+			// $('.productrender2').ThreeSixty({
+	  //     totalFrames: 72, // Total no. of image you have for 360 slider
+	  //     endFrame: 72, // end frame for the auto spin animation
+	  //     currentFrame: 1, // This the start frame for auto spin
+	  //     imgList: '.threesixty_images', // selector for image list
+	  //     progress: '.spinner', // selector to show the loading progress
+	  //     imagePath: 'assets/shower/2/', // path of the image assets
+	  //     filePrefix: '', // file prefix if any
+	  //     ext: '.jpg', // extention for the assets
+	  //     height: 450,
+	  //     width: 447,
+	  //     disableSpin: true
+	  // });
+			// $('.productrender3').ThreeSixty({
+	  //     totalFrames: 73, // Total no. of image you have for 360 slider
+	  //     endFrame: 73, // end frame for the auto spin animation
+	  //     currentFrame: 1, // This the start frame for auto spin
+	  //     imgList: '.threesixty_images', // selector for image list
+	  //     progress: '.spinner', // selector to show the loading progress
+	  //     imagePath: 'assets/chair/2/', // path of the image assets
+	  //     filePrefix: '', // file prefix if any
+	  //     ext: '.jpg', // extention for the assets
+	  //     height: 450,
+	  //     width: 447,
+	  //     disableSpin: true
+	  // });
 
 			$('.productrender4').ThreeSixty({
       totalFrames: 73, // Total no. of image you have for 360 slider
@@ -207,7 +225,21 @@
 	      currentFrame: 1, // This the start frame for auto spin
 	      imgList: '.threesixty_images', // selector for image list
 	      progress: '.spinner', // selector to show the loading progress
-	      imagePath: 'assets/fabric/2/', // path of the image assets
+	      imagePath: 'assets/faucet_solna/2/', // path of the image assets
+	      filePrefix: '', // file prefix if any
+	      ext: '.jpg', // extention for the assets
+	      height: 450,
+	      width: 447,
+	      disableSpin: true
+	  });
+
+				$('.productrender6').ThreeSixty({
+	      totalFrames: 73, // Total no. of image you have for 360 slider
+	      endFrame: 73, // end frame for the auto spin animation
+	      currentFrame: 1, // This the start frame for auto spin
+	      imgList: '.threesixty_images', // selector for image list
+	      progress: '.spinner', // selector to show the loading progress
+	      imagePath: 'assets/faucet_venuto/2/', // path of the image assets
 	      filePrefix: '', // file prefix if any
 	      ext: '.jpg', // extention for the assets
 	      height: 450,
@@ -275,45 +307,61 @@
 		{
 			switch(n)
 			{
+				// case 0:
+				// $('#product-visualization-info').attr("src", "images/tuscan_highchair.png");
+				// $('#product-visualization-fabric-colors').show();
+				// $('#product-visualization-shower-colors').hide();
+				// $('#product-visualization-chair-colors').hide();
+				// $('#product-visualization-toaster-colors').hide();
+				// $('#product-visualization-faucetb-colors').hide();
+				// $('#product-visualization-fauceta-colors').hide();
+				// break;
+				// case 1:
+				// $('#product-visualization-info').attr("src", "images/tuscan_bathtub.png");
+				// $('#product-visualization-shower-colors').show();
+				// $('#product-visualization-fabric-colors').hide();
+				// $('#product-visualization-chair-colors').hide();
+				// $('#product-visualization-toaster-colors').hide();
+				// $('#product-visualization-faucetb-colors').hide();
+				// $('#product-visualization-fauceta-colors').hide();
+				// break;
+				// case 2:
+				// $('#product-visualization-info').attr("src", "images/luxury_office_chair.png");
+				// $('#product-visualization-shower-colors').hide();
+				// $('#product-visualization-fabric-colors').hide();
+				// $('#product-visualization-toaster-colors').hide();
+				// $('#product-visualization-faucetb-colors').hide();
+				// $('#product-visualization-fauceta-colors').hide();
+				// $('#product-visualization-chair-colors').show();
+				// break;
 				case 0:
-				$('#product-visualization-info').attr("src", "images/tuscan_highchair.png");
-				$('#product-visualization-fabric-colors').show();
-				$('#product-visualization-shower-colors').hide();
-				$('#product-visualization-chair-colors').hide();
-				$('#product-visualization-toaster-colors').hide();
+				$('#product-visualization-info').attr("src", "images/smeg_slice_toaster.png");
+				// $('#product-visualization-shower-colors').hide();
+				// $('#product-visualization-fabric-colors').hide();
+				// $('#product-visualization-chair-colors').hide();
+				$('#product-visualization-fauceta-colors').hide();
 				$('#product-visualization-faucetb-colors').hide();
+				$('#product-visualization-toaster-colors').show();
+				// $("#product_visual_video").find("#video-src").attr("src","images/video/smeg_toaster.mp4");
+				// console.log('change vid here');
 				break;
 				case 1:
-				$('#product-visualization-info').attr("src", "images/tuscan_bathtub.png");
-				$('#product-visualization-shower-colors').show();
-				$('#product-visualization-fabric-colors').hide();
-				$('#product-visualization-chair-colors').hide();
+				$('#product-visualization-info').attr("src", "images/single_handle_faucet_1.png");
+				// $('#product-visualization-shower-colors').hide();
+				// $('#product-visualization-fabric-colors').hide();
+				// $('#product-visualization-chair-colors').hide();
 				$('#product-visualization-toaster-colors').hide();
-				$('#product-visualization-faucetb-colors').hide();
+				$('#product-visualization-fauceta-colors').hide();
+				$('#product-visualization-faucetb-colors').show();
 				break;
 				case 2:
-				$('#product-visualization-info').attr("src", "images/luxury_office_chair.png");
-				$('#product-visualization-shower-colors').hide();
-				$('#product-visualization-fabric-colors').hide();
+				$('#product-visualization-info').attr("src", "images/single_handle_faucet_2.png");
+				// $('#product-visualization-shower-colors').hide();
+				// $('#product-visualization-fabric-colors').hide();
+				// $('#product-visualization-chair-colors').hide();
 				$('#product-visualization-toaster-colors').hide();
 				$('#product-visualization-faucetb-colors').hide();
-				$('#product-visualization-chair-colors').show();
-				break;
-				case 3:
-				$('#product-visualization-info').attr("src", "images/smeg_slice_toaster.png");
-				$('#product-visualization-shower-colors').hide();
-				$('#product-visualization-fabric-colors').hide();
-				$('#product-visualization-chair-colors').hide();
-				$('#product-visualization-chair-colors').hide();
-				$('#product-visualization-faucetb-colors').show();
-				break;
-				case 4:
-				$('#product-visualization-info').attr("src", "images/tuscan_highchair.png");
-				$('#product-visualization-shower-colors').hide();
-				$('#product-visualization-fabric-colors').hide();
-				$('#product-visualization-chair-colors').hide();
-				$('#product-visualization-toaster-colors').hide();
-				$('#product-visualization-faucetb-colors').show();
+				$('#product-visualization-fauceta-colors').show();
 				break;
 			}
 		}
