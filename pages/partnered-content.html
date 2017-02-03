@@ -16,6 +16,7 @@
 			<button class="btn btn-lg" id="video_button_partneredContent" onclick="play6()">Video</button>
 		</div>
         <h2>Partnered Content</h2>
+        <hr class="horizontal_line">
         <p>Get even more exposure with a sponsored article or video about your product. Our team of writers and videographers will work with you  to create engaging online content that highlights the unique features of your item.</p>
     </div>
 </div>
@@ -28,10 +29,12 @@ $("#video_button_partneredContent").click(function() {
 	$(".hideLeftPartneredContent").fadeOut(1000, function() {
 		$(".hideLeftPartneredContent").hide();
 	});
+	$("#video_button_partneredContent").toggleClass("change_color");
 });
 
 $("#main_view_button_partneredContent").click(function() {
 	$(".hideLeftPartneredContent").fadeIn(1000);
+	$("#video_button_partneredContent").toggleClass("change_color_back");
 });
 
 
