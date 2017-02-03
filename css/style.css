@@ -642,7 +642,6 @@ a.right.carousel-control {
     flex-direction: column;
     justify-content: center;
     padding: 45px;
-    background-color: #fff;
 }
 .video {
     display: inline-block;
