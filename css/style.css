@@ -368,19 +368,19 @@ h1{
     float: left;
     list-style: none;
 }
-.availableColorsList li a {
+/*.availableColorsList li a {
     margin: 5px;
     padding: 0 10px;
     border: 2px solid #ccc;
     text-decoration: none;
-}
+}*/
 .availableColorsList li a:hover{
 	text-decoration: none !important;
 	border: 2px solid #E97925 !important;
 }
-.availableColorsList li a.active{
+/*.availableColorsList li a.active{
 	border: 2px solid #E97925 !important;
-}
+}*/
 .boxedWithInfo {
     border: 1px solid #ccc;
     height: 150px;
@@ -875,6 +875,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', end
 
 
 
+
 /*#video_button_partneredContent {
     color: #ffbe8e;
 }*/
@@ -896,4 +897,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', end
 }
 .switchViewButton button:first-child {
     color: #fff;
+}
+
+.availableColorsList li a {
+    margin: 5px;
+    padding: 6px 16px;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.availableColorsList li a.active {
+    border: 2px solid #E97925 !important;
+    background: white !important;
 }
