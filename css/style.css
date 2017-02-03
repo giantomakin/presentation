@@ -164,9 +164,7 @@ footer {
     height: 160px;
 }
 
-.itemSelected {
-    color: #e97925 !important;
-}
+
 
 .navbar-nav {
     display: flex;
@@ -175,13 +173,28 @@ footer {
     width: 100%;
 }
 .nav > li {
-    padding: 40px 0 70px;
+      padding: 70px 0 70px;
 }
 .navbar-nav > li > a {
-    font-size: 25px;
+    font-size: 15px !important;
     color: #676767;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
 }
+
+.slide-title{
+	font-size: 17px;
+    color: #676767;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+}
+
+.itemSelected ,.navbar-nav > li > a:hover {
+        background-color:#e46e2d !important;
+        color:white !important;
+}
+
+
 .glyphicon-triangle-bottom {
     width: 100%;
     position: absolute;
@@ -195,9 +208,6 @@ footer {
 .makeVisible {
     visibility: visible;
 }
-
-
-
 
 
 /*CAROUSEL DISPLAYED ON COLORPALLATE.HTML PAGE*/
@@ -484,10 +494,6 @@ h1{
 }
 
 
-
-
-
-
 .productVisualRow{
     background-color: #f2f2f2;
     position: relative;
@@ -586,13 +592,13 @@ h1{
 a.left.carousel-control {
     width: 100px;
     height: 100px;
-    top: 45%;
+    top: 55%;
     background: none;
 }
 a.right.carousel-control {
     width: 100px;
     height: 100px;
-    top: 45%;
+    top: 55%;
     background: none;
 }
 .carousel-control .glyphicon-menu-right {
@@ -645,7 +651,7 @@ a.right.carousel-control {
         height: calc(100% - 260px);
     }
      .navbar-nav > li > a {
-        line-height: 30px;
+        line-height: 16px;
     }
     .navbar-nav {
         padding: 0 100px;
@@ -841,10 +847,4 @@ background: -moz-linear-gradient(top, rgba(246,248,249,1) 0%, rgba(229,235,238,1
 background: -webkit-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 );
-}
-
-.slide-title{
-	font-size: 25px;
-	    color: #676767;
-	    font-family: 'Roboto Condensed', sans-serif;
 }
