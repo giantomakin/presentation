@@ -1,0 +1,55 @@
+<div class="col-xs-8 video_section">
+	<video id="virtual_room_video" loop muted width="100%" height="100%">
+		<source src="images/video/virtual_room.mp4" type="video/mp4">
+	</video>
+</div>
+
+
+<div class="col-xs-8 left-section hideLeftVirtualRoom" style="background-image: url('images/new/product_placement.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;">
+
+</div>
+
+
+<div class="col-xs-4 right-section">
+
+
+	<div>
+		<div class="switchViewButton">
+			<button class="btn btn-lg" id="main_view_button_virtualRoom" onclick="pause5()">Main View</button>
+			<button class="btn btn-lg" id="video_button_virtualRoom" onclick="play5()">Video</button>
+		</div>
+		<h2>Product Placement</h2>
+		<p>This our signature feature Once a product is rendered as a complete product visualization, it is eligible for placement in House Tipster’s interactive Virtual Rooms, where homeowners create custom interior designs and wishlists of their favorite items.</p>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+
+$("#video_button_virtualRoom").click(function() {
+  $(".hideLeftVirtualRoom").fadeOut(1000, function() {
+  	$(".hideLeftVirtualRoom").hide();
+  });
+});
+
+$("#main_view_button_virtualRoom").click(function() {
+  $(".hideLeftVirtualRoom").fadeIn(1000);
+});
+
+
+var myVideo5 = document.getElementById("virtual_room_video");
+
+function play5() {
+    if (myVideo5.paused)
+        myVideo5.play();
+}
+
+function pause5() {
+	if (myVideo5.play)
+		myVideo5.pause();
+}
+</script>
