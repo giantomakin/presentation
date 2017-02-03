@@ -34,7 +34,7 @@
 <div class="col-xs-4 right-section" style="float:right;">
 	<div>
 		<div class="switchViewButton">
-			<button class="btn btn-lg" id="main_view_button_threeSixtyPhoto" onclick="pause3()">Main View</button>
+			<button class="btn btn-lg view-active" id="main_view_button_threeSixtyPhoto" onclick="pause3()">Main View</button>
 			<button class="btn btn-lg" id="video_button_threeSixtyPhoto" onclick="play3()">Video</button>
 		</div>
 		<h2>360&deg; Photography</h2>
@@ -69,12 +69,14 @@ $(document).ready(function(){
 
 
 $("#video_button_threeSixtyPhoto").click(function() {
+		$('#main_view_button_threeSixtyPhoto').removeClass('view-active');$('#video_button_threeSixtyPhoto').addClass('view-active');
   $(".hideLeftThreeSixtyPhoto, .hideMiddleThreeSixtyPhoto").fadeOut(1000, function() {
   	$(".hideLeftThreeSixtyPhoto, .hideMiddleThreeSixtyPhoto").hide();
   });
 });
 
 $("#main_view_button_threeSixtyPhoto").click(function() {
+	$('#main_view_button_threeSixtyPhoto').addClass('view-active');$('#video_button_threeSixtyPhoto').removeClass('view-active');
   $(".hideLeftThreeSixtyPhoto, .hideMiddleThreeSixtyPhoto").fadeIn(1000);
 });
 

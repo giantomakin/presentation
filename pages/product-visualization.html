@@ -156,7 +156,7 @@
 	<div class="col-xs-4 right-section" style="float:right;">
 		<div>
 			<div class="switchViewButton">
-				<button class="btn btn-lg" id="main_view_button_productVisual" onclick="pause4()">Main View</button>
+				<button class="btn btn-lg view-active" id="main_view_button_productVisual" onclick="pause4()">Main View</button>
 				<button class="btn btn-lg" id="video_button_productVisual" onclick="play4()">Video</button>
 				<button class="btn btn-lg" id="3rd_button" onclick="">Full View</button>
 			</div>
@@ -255,13 +255,20 @@
 		});
 
 
+
 		$("#video_button_productVisual").click(function() {
+			$('#main_view_button_productVisual').removeClass('view-active');
+			$('#3rd_button').removeClass('view-active');
+			$('#video_button_productVisual').addClass('view-active');
 			$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeOut(1000, function() {
 				$(".hideLeftProductVisual, .hideMiddleProductVisual").hide();
 			});
 		});
 
 		$("#main_view_button_productVisual").click(function() {
+			$('#main_view_button_productVisual').addClass('view-active');
+			$('#3rd_button').removeClass('view-active');
+			$('#video_button_productVisual').removeClass('view-active');
 			if($(".hideMiddleProductVisual").hasClass("hidden")){
 				if($(".hideLeftProductVisual").hasClass("fullWidthLeftSection")){
 					$(".hideLeftProductVisual").removeClass("fullWidthLeftSection");
@@ -275,6 +282,11 @@
 		});
 
 		$("#3rd_button").click(function() {
+
+			$('#main_view_button_productVisual').removeClass('view-active');
+			$('#video_button_productVisual').removeClass('view-active');
+			$('#3rd_button').addClass('view-active');
+
 			if($(".hideMiddleProductVisual").hasClass("hidden")){
 				$(".hideMiddleProductVisual").removeClass('hidden').show();
 				$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
@@ -285,7 +297,6 @@
 
 			}
 		});
-
 
 
 

@@ -40,7 +40,7 @@
 <div class="col-xs-4 right-section" style="float:right;">
 	<div>
 		<div class="switchViewButton">
-			<button class="btn btn-lg" id="main_view_button_staticPicture" onclick="pause()">Main View</button>
+			<button class="btn btn-lg view-active" id="main_view_button_staticPicture" onclick="pause()">Main View</button>
 			<button class="btn btn-lg" id="video_button_staticPicture" onclick="play()">Video</button>
 		</div>
 		<h2>Static Picture</h2>
@@ -61,12 +61,14 @@
 
 <script type="text/javascript">
 $("#video_button_staticPicture").click(function() {
+	$('#main_view_button_staticPicture').removeClass('view-active');$('#video_button_staticPicture').addClass('view-active');
   $(".hideLeftStaticPicture, .hideMiddleStaticPicture").fadeOut(1000, function() {
   	$(".hideLeftStaticPicture, .hideMiddleStaticPicture").hide();
   });
 });
 
 $("#main_view_button_staticPicture").click(function() {
+	$('#main_view_button_staticPicture').addClass('view-active');$('#video_button_staticPicture').removeClass('view-active');
   $(".hideLeftStaticPicture, .hideMiddleStaticPicture").fadeIn(1000);
 });
 

@@ -21,7 +21,7 @@
 <div class="col-xs-4 right-section" style="float:right;">
     <div>
     	<div class="switchViewButton">
-			<button class="btn btn-lg" id="main_view_button_productRender" onclick="pause2()">Main View</button>
+			<button class="btn btn-lg view-active" id="main_view_button_productRender" onclick="pause2()">Main View</button>
 			<button class="btn btn-lg" id="video_button_productRender" onclick="play2()">Video</button>
 		</div>
         <h2>Product Render</h2>
@@ -39,12 +39,14 @@
 
 <script type="text/javascript">
 $("#video_button_productRender").click(function() {
+	$('#main_view_button_productRender').removeClass('view-active');$('#video_button_productRender').addClass('view-active');
   $(".hideLeftProductRender, .hideMiddleProductRender").fadeOut(1000, function() {
   	$(".hideLeftProductRender, .hideMiddleProductRender").hide();
   });
 });
 
 $("#main_view_button_productRender").click(function() {
+	$('#main_view_button_productRender').addClass('view-active');$('#video_button_productRender').removeClass('view-active');
   $(".hideLeftProductRender, .hideMiddleProductRender").fadeIn(1000);
 });
 

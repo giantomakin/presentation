@@ -895,7 +895,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', end
 .switchViewButton {
     color: #ffb38e;
 }
-.switchViewButton button:first-child {
+.view-active {
     color: #fff;
 }
 
