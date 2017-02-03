@@ -78,10 +78,13 @@ app.controller('mainController', function($scope, $browser) {
 
     myCarousel.bind('slide.bs.carousel', function(e) {
         var id = $(e.relatedTarget).data('target-id');
+        var name = $(e.relatedTarget).data('page-name');
         clearActiveSlides();
         console.log(id);
+        console.log(name);
         $("#" + id).addClass("itemSelected");
         $("#" + id).prev().addClass("makeVisible");
+        $('#page-title').html(name.toUpperCase());
     });
 
     function clearActiveSlides() {

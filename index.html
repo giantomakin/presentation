@@ -70,28 +70,30 @@
         </div>
         <!-- /.container -->
     </nav>
+
 	<div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 	  <!-- Indicators -->
 	  <!-- Wrapper for slides -->
+	  <p class="slide-title"><span style="font-size:20px !important; color:#e46e2d;" class="glyphicon glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span id="page-title">STATIC PICTURE</span></p>
 	  <div class="carousel-inner" role="listbox">
 	    <div class="item" data-target-id="a1">
 
-			<div class="carousel-caption" ng-include="'pages/static-picture.html'"></div>
+			<div class="carousel-caption" data-page-name="static picture" ng-include="'pages/static-picture.html'"></div>
 
 	    </div>
-	    <div class="item" data-target-id="a2">
+	    <div class="item" data-page-name="product render" data-target-id="a2">
 	        <div class="carousel-caption" ng-include="'pages/product-render.html'"></div>
 	    </div>
-	    <div class="item" data-target-id="a3">
+	    <div class="item" data-page-name="360 photography" data-target-id="a3">
 	        <div class="carousel-caption" ng-include="'pages/threesixty-photography.html'"></div>
 	    </div>
-	    <div class="item" data-target-id="a4">
+	    <div class="item" data-page-name="product visualization" data-target-id="a4">
 	        <div class="carousel-caption" ng-include="'pages/product-visualization.html'"></div>
 	    </div>
-	    <div class="item" data-target-id="a5">
+	    <div class="item" data-page-name="ht room placement" data-target-id="a5">
 	        <div class="carousel-caption" ng-include="'pages/virtual-room.html'"></div>
 	    </div>
-	    <div class="item" data-target-id="a6">
+	    <div class="item" data-page-name="advertising solutions" data-target-id="a6">
 	        <div class="carousel-caption" ng-include="'pages/partnered-content.html'"></div>
 	    </div>
 	  </div>
