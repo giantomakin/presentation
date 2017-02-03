@@ -89,22 +89,22 @@ footer {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /*CHANGED*/
 
     text-shadow: none;
     text-align: justify;
-    padding: 4%;
+    padding: 100px 4%; /*CHANGED*/
 }
 .right-section h2 {
     text-transform: uppercase;
     font-family: 'Roboto Condensed', sans-serif !important;
-    font-weight: 600;
+    font-weight: 500; /*CHANGED*/
     font-size: 46px;
-    text-align: center;
+    text-align: left; /*CHANGED*/
     letter-spacing: 2px;
     padding-bottom: 10px;
     width: 90%;
-    margin: 10px auto;
+    /*margin: 10px auto;*/ /*CHANGED*/
 }
 .right-section p {
     font-size: 32px;
@@ -117,19 +117,19 @@ footer {
     word-spacing: 0px;
 }
 
-.right-section .switchViewButton {
+.right-section .switchViewButton { /*CHANGED*/
     position: absolute;
-    top: 3%;
-    left: 3%;
+    top: 50px;
+    left: 50px;
 }
 
 .right-section button {
     font-size: 20px;
-    width: 140px;
+    /*width: 140px;*/ /*CHANGED*/
     margin: 0 10px;
     padding: 7px;
     background: transparent;
-    color: #f9af82;
+    /*color: #ffffff;*/ /*CHANGED*/
     border-radius: 15px;
     border-color: #e97925;
     font-family: 'Roboto Condensed';
@@ -707,7 +707,7 @@ a.right.carousel-control {
 
 }
 
-@media screen and (min-width: 1401px) and (max-width: 1750px) {
+@media screen and (min-width: 1401px) and (max-width: 1920px) { /*CHANGED - updated width from 1750 to 1920 */
     .right-section h2 {
         font-size: 36px;
     }
@@ -847,4 +847,34 @@ background: -moz-linear-gradient(top, rgba(246,248,249,1) 0%, rgba(229,235,238,1
 background: -webkit-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 );
+}
+
+
+
+
+
+
+
+
+/*#video_button_partneredContent {
+    color: #ffbe8e;
+}*/
+
+.change_color {
+    color: #ffffff !important;
+}
+.change_color_back {
+    color: #ffb38e !important;
+}
+.horizontal_line {
+    border: 1px solid #ffbe8e;
+    margin-right:70%;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+.switchViewButton {
+    color: #ffb38e;
+}
+.switchViewButton button:first-child {
+    color: #fff;
 }
