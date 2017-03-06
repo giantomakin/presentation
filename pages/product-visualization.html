@@ -8,7 +8,7 @@
 	<div class="col-xs-5 left-section hideLeftProductVisual">
 		<div class="staticPictureSection" style="position: relative;">
 
-			<div class="" style="position: relative; display: flex; flex-direction: column; justify-content; center;height: 70%;">
+			<div class="mySlides-container" style="display: flex; flex-direction: column; justify-content; center;height: 70%;">
 				<div class="mySlides" id="fabric-slide">
 					<div class="productImages">
 						<div class="singleImage" style="height: 70%;">
@@ -85,6 +85,20 @@
 						<div class="singleImage" style="height: 70%;">
 							<div class="productVisualizer">
 								<div class="threesixty productrender6">
+									<div class="spinner">
+										<span>0%</span>
+									</div>
+									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mySlides" id="marcin-slide">
+					<div class="productImages">
+						<div class="singleImage" style="height: 70%;">
+							<div class="productVisualizer">
+								<div class="threesixty productrender7">
 									<div class="spinner">
 										<span>0%</span>
 									</div>
@@ -211,7 +225,7 @@
 	  //     disableSpin: true
 	  // });
 
-			$('.productrender4').ThreeSixty({
+	  $('.productrender4').ThreeSixty({
       totalFrames: 73, // Total no. of image you have for 360 slider
       endFrame: 73, // end frame for the auto spin animation
       currentFrame: 1, // This the start frame for auto spin
@@ -224,7 +238,7 @@
       width: 447,
       disableSpin: true
   });
-			$('.productrender5').ThreeSixty({
+	  $('.productrender5').ThreeSixty({
 	      totalFrames: 73, // Total no. of image you have for 360 slider
 	      endFrame: 73, // end frame for the auto spin animation
 	      currentFrame: 1, // This the start frame for auto spin
@@ -238,7 +252,7 @@
 	      disableSpin: true
 	  });
 
-				$('.productrender6').ThreeSixty({
+	  $('.productrender6').ThreeSixty({
 	      totalFrames: 73, // Total no. of image you have for 360 slider
 	      endFrame: 73, // end frame for the auto spin animation
 	      currentFrame: 1, // This the start frame for auto spin
@@ -252,83 +266,98 @@
 	      disableSpin: true
 	  });
 
-		});
+
+	  $('.productrender7').ThreeSixty({
+	       totalFrames: 73, // Total no. of image you have for 360 slider
+	       endFrame: 73, // end frame for the auto spin animation
+	       currentFrame: 1, // This the start frame for auto spin
+	       imgList: '.threesixty_images', // selector for image list
+	       progress: '.spinner', // selector to show the loading progress
+	       imagePath: 'assets/marcinelica/', // path of the image assets
+	       filePrefix: '', // file prefix if any
+	       ext: '.jpg', // extention for the assets
+	       height: 450,
+	       width: 447,
+	       disableSpin: true
+	   });
+
+	});
 
 
 
-		$("#video_button_productVisual").click(function() {
-			$('#main_view_button_productVisual').removeClass('view-active');
-			$('#3rd_button').removeClass('view-active');
-			$('#video_button_productVisual').addClass('view-active');
-			$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeOut(1000, function() {
-				$(".hideLeftProductVisual, .hideMiddleProductVisual").hide();
-			});
-		});
+$("#video_button_productVisual").click(function() {
+	$('#main_view_button_productVisual').removeClass('view-active');
+	$('#3rd_button').removeClass('view-active');
+	$('#video_button_productVisual').addClass('view-active');
+	$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeOut(1000, function() {
+		$(".hideLeftProductVisual, .hideMiddleProductVisual").hide();
+	});
+});
 
-		$("#main_view_button_productVisual").click(function() {
-			$('#main_view_button_productVisual').addClass('view-active');
-			$('#3rd_button').removeClass('view-active');
-			$('#video_button_productVisual').removeClass('view-active');
-			if($(".hideMiddleProductVisual").hasClass("hidden")){
-				if($(".hideLeftProductVisual").hasClass("fullWidthLeftSection")){
-					$(".hideLeftProductVisual").removeClass("fullWidthLeftSection");
-					$(".hideMiddleProductVisual").removeClass('hidden').show();
-					$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
-				}
-			}else{
-				$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
-			}
-
-		});
-
-		$("#3rd_button").click(function() {
-
-			$('#main_view_button_productVisual').removeClass('view-active');
-			$('#video_button_productVisual').removeClass('view-active');
-			$('#3rd_button').addClass('view-active');
-
-			if($(".hideMiddleProductVisual").hasClass("hidden")){
-				$(".hideMiddleProductVisual").removeClass('hidden').show();
-				$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
-			}else{
-				$(".hideMiddleProductVisual").addClass('hidden').hide();
-				$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
-				$(".hideLeftProductVisual, .hideMiddleProductVisual").show();
-
-			}
-		});
-
-
-
-		var myVideo4 = document.getElementById("product_visual_video");
-
-		function play4() {
-			if (myVideo4.paused)
-				myVideo4.play();
+$("#main_view_button_productVisual").click(function() {
+	$('#main_view_button_productVisual').addClass('view-active');
+	$('#3rd_button').removeClass('view-active');
+	$('#video_button_productVisual').removeClass('view-active');
+	if($(".hideMiddleProductVisual").hasClass("hidden")){
+		if($(".hideLeftProductVisual").hasClass("fullWidthLeftSection")){
+			$(".hideLeftProductVisual").removeClass("fullWidthLeftSection");
+			$(".hideMiddleProductVisual").removeClass('hidden').show();
+			$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
 		}
+	}else{
+		$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
+	}
 
-		function pause4() {
-			if (myVideo4.play)
-				myVideo4.pause();
-		}
+});
+
+$("#3rd_button").click(function() {
+
+	$('#main_view_button_productVisual').removeClass('view-active');
+	$('#video_button_productVisual').removeClass('view-active');
+	$('#3rd_button').addClass('view-active');
+
+	if($(".hideMiddleProductVisual").hasClass("hidden")){
+		$(".hideMiddleProductVisual").removeClass('hidden').show();
+		$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
+	}else{
+		$(".hideMiddleProductVisual").addClass('hidden').hide();
+		$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
+		$(".hideLeftProductVisual, .hideMiddleProductVisual").show();
+
+	}
+});
 
 
 
-		var slideIndex = 1;
-		showDivs(slideIndex);
+var myVideo4 = document.getElementById("product_visual_video");
 
-		function plusDivs(n) {
-			showDivs(slideIndex += n);
-		}
+function play4() {
+	if (myVideo4.paused)
+		myVideo4.play();
+}
 
-		function checkSlide(n)
-		{
-			switch(n)
-			{
-				case 0:
-				$('#product-visualization-info').attr("src", "images/tuscan_highchair.png");
-				$('#product-visualization-fabric-colors').show();
-				$('#product-visualization-shower-colors').hide();
+function pause4() {
+	if (myVideo4.play)
+		myVideo4.pause();
+}
+
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+	showDivs(slideIndex += n);
+}
+
+function checkSlide(n)
+{
+	switch(n)
+	{
+		case 0:
+		$('#product-visualization-info').attr("src", "images/tuscan_highchair.png");
+		$('#product-visualization-fabric-colors').show();
+		$('#product-visualization-shower-colors').hide();
 				// $('#product-visualization-chair-colors').hide();
 				$('#product-visualization-toaster-colors').hide();
 				$('#product-visualization-faucetb-colors').hide();
@@ -399,5 +428,43 @@
 			}
 			x[slideIndex-1].style.display = "block";
 			checkSlide(slideIndex-1);
+			if(slideIndex-1 == 5){
+				$('#main_view_button_productVisual').removeClass('view-active');
+				$('#video_button_productVisual').removeClass('view-active');
+				$('#3rd_button').addClass('view-active');
+
+				if($(".hideMiddleProductVisual").hasClass("hidden")){
+					$(".hideMiddleProductVisual").removeClass('hidden').show();
+					$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
+				}else{
+					$(".hideMiddleProductVisual").addClass('hidden').hide();
+					$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
+					$(".hideLeftProductVisual, .hideMiddleProductVisual").show();
+
+				}
+				$('#main_view_button_productVisual').prop("disabled",true);
+				$('#video_button_productVisual').prop("disabled",true);
+				$('#3rd_button').prop("disabled",true);
+				$('.mySlides-container').css("position","static");
+				$('.staticPictureSection').css("border","none");
+			}else{
+				$('.staticPictureSection').css("border","2px solid #f2f2f2");
+				$('.mySlides-container').css("position","relative");
+				$('#main_view_button_productVisual').prop("disabled",false);
+				$('#video_button_productVisual').prop("disabled",false);
+				$('#3rd_button').prop("disabled",false);
+				$('#main_view_button_productVisual').addClass('view-active');
+				$('#3rd_button').removeClass('view-active');
+				$('#video_button_productVisual').removeClass('view-active');
+				if($(".hideMiddleProductVisual").hasClass("hidden")){
+					if($(".hideLeftProductVisual").hasClass("fullWidthLeftSection")){
+						$(".hideLeftProductVisual").removeClass("fullWidthLeftSection");
+						$(".hideMiddleProductVisual").removeClass('hidden').show();
+						$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
+					}
+				}else{
+					$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
+				}
+			}
 		}
 	</script>
