@@ -9,6 +9,20 @@
 		<div class="staticPictureSection" style="position: relative;">
 
 			<div class="mySlides-container" style="position: relative; display: flex; flex-direction: column; justify-content; center;height: 70%;">
+				<div class="mySlides" id="marcin-slide">
+					<div class="productImages">
+						<div class="singleImage" style="height: 70%;">
+							<div class="productVisualizer">
+								<div class="threesixty productrender7">
+									<div class="spinner">
+										<span>0%</span>
+									</div>
+									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="mySlides" id="fabric-slide">
 					<div class="productImages">
 						<div class="singleImage" style="height: 70%;">
@@ -94,20 +108,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="mySlides" id="marcin-slide">
-					<div class="productImages">
-						<div class="singleImage" style="height: 70%;">
-							<div class="productVisualizer">
-								<div class="threesixty productrender7">
-									<div class="spinner">
-										<span>0%</span>
-									</div>
-									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+
 			</div>
 
 			<div class="click_and_drag">
@@ -159,7 +160,18 @@
 				</ul>
 				<ul class="availableColorsList" id="product-visualization-fauceta-colors" hidden>
 					<li><a href="#" class="chrome" data-color="5" ng-click="pickPallete($event)">&nbsp;</a></li>
-					<li><a href="#" class="steel active" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
+					<li><a href="#" class="steel" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
+				</ul>
+
+					<ul class="availableColorsList" id="product-visualization-elica-colors" hidden>
+					<li><a style="color: #AAAAAA;
+    cursor: default;
+    pointer-events: none;
+    text-decoration: none;" href="#" data-color="5" ng-href="{{isDisabled ? '' : '#/foo'}}" >&nbsp;</a></li>
+					<li><a style="color: #AAAAAA;
+    cursor: default;
+    pointer-events: none;
+    text-decoration: none;" href="#" data-color="6"    ng-disabled="isDisabled" >&nbsp;</a></li>
 				</ul>
 				<img src="images/new/product_visualization_bottom_part.png" style="width: 100%;">
 			</div>
@@ -355,6 +367,14 @@ function checkSlide(n)
 	switch(n)
 	{
 		case 0:
+		$('#product-visualization-elica-colors').show().attr("disabled", "disabled").off('click');
+		$('#product-visualization-fabric-colors').hide();
+		$('#product-visualization-shower-colors').hide();
+		$('#product-visualization-toaster-colors').hide();
+		$('#product-visualization-faucetb-colors').hide();
+		$('#product-visualization-fauceta-colors').hide();
+		break;
+		case 1:
 		$('#product-visualization-info').attr("src", "images/tuscan_highchair.png");
 		$('#product-visualization-fabric-colors').show();
 		$('#product-visualization-shower-colors').hide();
@@ -363,7 +383,7 @@ function checkSlide(n)
 				$('#product-visualization-faucetb-colors').hide();
 				$('#product-visualization-fauceta-colors').hide();
 				break;
-				case 1:
+				case 2:
 				$('#product-visualization-info').attr("src", "images/tuscan_bathtub.png");
 				$('#product-visualization-shower-colors').show();
 				$('#product-visualization-fabric-colors').hide();
@@ -381,7 +401,7 @@ function checkSlide(n)
 				// $('#product-visualization-fauceta-colors').hide();
 				// $('#product-visualization-chair-colors').show();
 				// break;
-				case 2:
+				case 3:
 				$('#product-visualization-info').attr("src", "images/smeg_slice_toaster.png");
 				$('#product-visualization-shower-colors').hide();
 				$('#product-visualization-fabric-colors').hide();
@@ -394,7 +414,7 @@ function checkSlide(n)
 				// $("#product_visual_video").find("#video-src").attr("src","images/video/smeg_toaster.mp4");
 				// console.log('change vid here');
 				break;
-				case 3:
+				case 4:
 				$('#product-visualization-info').attr("src", "images/single_handle_faucet_1.png");
 				$('#product-visualization-shower-colors').hide();
 				$('#product-visualization-fabric-colors').hide();
@@ -405,7 +425,7 @@ function checkSlide(n)
 				$("#product_visual_video").find("#video-src").attr("src","images/video/brizo_solna.mp4");
 				$("#product_visual_video")[0].load();
 				break;
-				case 4:
+				case 5:
 				$('#product-visualization-info').attr("src", "images/single_handle_faucet_2.png");
 				$('#product-visualization-shower-colors').hide();
 				$('#product-visualization-fabric-colors').hide();
@@ -428,7 +448,7 @@ function checkSlide(n)
 			}
 			x[slideIndex-1].style.display = "block";
 			checkSlide(slideIndex-1);
-			if(slideIndex-1 == 5){
+			if(slideIndex-1 == 0){
 
 				$('.display-left').css({"background-color":"transparent"});
 				$('.display-right').css({"background-color":"transparent"});

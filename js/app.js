@@ -222,6 +222,20 @@ app.controller('mainController', function($scope, $browser) {
             disableSpin: true
         });
 
+        	  $('.productrender7').ThreeSixty({
+	       totalFrames: 73, // Total no. of image you have for 360 slider
+	       endFrame: 73, // end frame for the auto spin animation
+	       currentFrame: 1, // This the start frame for auto spin
+	       imgList: '.threesixty_images', // selector for image list
+	       progress: '.spinner', // selector to show the loading progress
+	       imagePath: 'assets/marcinelica/', // path of the image assets
+	       filePrefix: '', // file prefix if any
+	       ext: '.jpg', // extention for the assets
+	       height: 450,
+	       width: 447,
+	       disableSpin: true
+	   });
+
 
 
     }
