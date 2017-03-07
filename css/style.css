@@ -571,7 +571,7 @@ h1{
 
 
 .threesixty .threesixty_images img.current-image {
-    width: 85%;
+    /*width: 85%;*/
 }
 
 .threesixty .threesixty_images img.current-image {
@@ -585,9 +585,12 @@ h1{
 }
 
 .threesixty .threesixty_images img {
-    left: 8%;
+    left: 0%;
 }
-
+.threesixty.productrender7 .threesixty_images img {
+    top: -17% !important;
+    height: 143% !important;
+}
 
 .productVisual .secondRowTabs {
     background-color: #676767;

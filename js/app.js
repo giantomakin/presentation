@@ -73,7 +73,7 @@ app.controller('mainController', function($scope, $browser) {
         myCarousel.carousel(newIndex);
         clearActiveSlides();
         $("#" + id).addClass("itemSelected");
-        $('.staticPictureSection').css("border","2px solid #f2f2f2");
+        //$('.staticPictureSection').css("border","2px solid #f2f2f2");
         // $("#" + id).prev().addClass("makeVisible");
     }
 
