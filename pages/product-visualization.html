@@ -428,47 +428,14 @@ function checkSlide(n)
 			}
 			x[slideIndex-1].style.display = "block";
 			checkSlide(slideIndex-1);
-			// if(slideIndex-1 == 5){
-			// 	$('#main_view_button_productVisual').removeClass('view-active');
-			// 	$('#video_button_productVisual').removeClass('view-active');
-			// 	$('#3rd_button').addClass('view-active');
+			if(slideIndex-1 == 5){
 
-			// 	if($(".hideMiddleProductVisual").hasClass("hidden")){
-			// 		$(".hideMiddleProductVisual").removeClass('hidden').show();
-			// 		$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
-			// 	}else{
-			// 		$(".hideMiddleProductVisual").addClass('hidden').hide();
-			// 		$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
-			// 		$(".hideLeftProductVisual, .hideMiddleProductVisual").show();
+				$('.display-left').css({"background-color":"transparent"});
+				$('.display-right').css({"background-color":"transparent"});
+			}else{
+				$('.display-left').css({"background-color":"#F2F2F2"});
+				$('.display-right').css({"background-color":"#F2F2F2"});
 
-			// 	}
-			// 	$('#main_view_button_productVisual').prop("disabled",true);
-			// 	$('#video_button_productVisual').prop("disabled",true);
-			// 	$('#3rd_button').prop("disabled",true);
-			// 	$('.mySlides-container').css("position","static");
-			// 	$('.staticPictureSection').css("border","none");
-			// 	$('.display-left').css({"left":"140px","opacity":"0.7"});
-			// 	$('.display-right').css({"right":"130px","opacity":"0.7"});
-			// }else{
-			// 	$('.display-left').css({"left":"70px","opacity":"1"});
-			// 	$('.display-right').css({"right":"70px","opacity":"1"});
-			// 	$('.staticPictureSection').css("border","2px solid #f2f2f2");
-			// 	$('.mySlides-container').css("position","relative");
-			// 	$('#main_view_button_productVisual').prop("disabled",false);
-			// 	$('#video_button_productVisual').prop("disabled",false);
-			// 	$('#3rd_button').prop("disabled",false);
-			// 	$('#main_view_button_productVisual').addClass('view-active');
-			// 	$('#3rd_button').removeClass('view-active');
-			// 	$('#video_button_productVisual').removeClass('view-active');
-			// 	if($(".hideMiddleProductVisual").hasClass("hidden")){
-			// 		if($(".hideLeftProductVisual").hasClass("fullWidthLeftSection")){
-			// 			$(".hideLeftProductVisual").removeClass("fullWidthLeftSection");
-			// 			$(".hideMiddleProductVisual").removeClass('hidden').show();
-			// 			$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
-			// 		}
-			// 	}else{
-			// 		$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
-			// 	}
-			// }
+			}
 		}
 	</script>
