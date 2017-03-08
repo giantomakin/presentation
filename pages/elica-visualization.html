@@ -1,0 +1,328 @@
+<div class="col-xs-8 video_section">
+	<video id="product_visual_video" loop muted width="100%" height="100%">
+		<source id="video-src" src="images/video/product_visualization.mp4" type="video/mp4">
+		</video>
+	</div>
+
+
+	<div class="col-xs-5 left-section hideLeftProductVisual">
+		<div class="staticPictureSection" style="position: relative;">
+
+			<div class="mySlides-container" style="position: relative; display: flex; flex-direction: column; justify-content; center;height: 70%;">
+				<div class="mySlides" id="marcin-slide">
+					<div class="productImages">
+						<div class="singleImage" style="height: 70%;">
+							<div class="productVisualizer">
+								<div class="threesixty productrender7">
+									<div class="spinner">
+										<span>0%</span>
+									</div>
+									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mySlides" id="fabric-slide">
+					<div class="productImages">
+						<div class="singleImage" style="height: 70%;">
+							<div class="productVisualizer">
+								<div class="threesixty productrender">
+									<div class="spinner">
+										<span>0%</span>
+									</div>
+									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="mySlides" id="shower-slide">
+					<div class="productImages">
+						<div class="singleImage" style="height: 70%;">
+							<div class="productVisualizer">
+								<div class="threesixty productrender2">
+									<div class="spinner">
+										<span>0%</span>
+									</div>
+									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+<!-- 				<div class="mySlides" id="chair-slide">
+					<div class="productImages">
+						<div class="singleImage" style="height: 70%;">
+							<div class="productVisualizer">
+								<div class="threesixty productrender3">
+									<div class="spinner">
+										<span>0%</span>
+									</div>
+									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<div class="mySlides" id="toaster-slide">
+					<div class="productImages">
+						<div class="singleImage" style="height: 70%;">
+							<div class="productVisualizer">
+								<div class="threesixty productrender4">
+									<div class="spinner">
+										<span>0%</span>
+									</div>
+									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mySlides" id="faucetb-slide">
+					<div class="productImages">
+						<div class="singleImage" style="height: 70%;">
+							<div class="productVisualizer">
+								<div class="threesixty productrender5">
+									<div class="spinner">
+										<span>0%</span>
+									</div>
+									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mySlides" id="fauceta-slide">
+					<div class="productImages">
+						<div class="singleImage" style="height: 70%;">
+							<div class="productVisualizer">
+								<div class="threesixty productrender6">
+									<div class="spinner">
+										<span>0%</span>
+									</div>
+									<ol class="threesixty_images ts" style="text-align: justify;"></ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="click_and_drag">
+				<img src="images/click_n_drag.png" style="max-width: 100px; padding-bottom: 5px;">
+			</div>
+		</div>
+<!-- 		<a href="#" class="btn-floating display-left" onclick="plusDivs(-1)">&#10094;</a>
+		<a href="#" class="btn-floating display-right" onclick="plusDivs(1)">&#10095;</a> -->
+	</div>
+
+	<div class="col-xs-3 middle-section hideMiddleProductVisual">
+		<div class="staticPictureSection2">
+			<div class="col-xs-12 productInfo" style="text-align: left !important;">
+
+				<img id="product-visualization-info" src="images/tuscan_highchair.png">
+
+
+				<img src="images/new/product_visualization_bottom_part.png" style="width: 100%;">
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-xs-4 right-section" style="float:right;">
+		<div>
+			<div class="switchViewButton">
+				<button class="btn btn-lg view-active" id="main_view_button_productVisual" onclick="pause4()">Main View</button>
+			<!-- 	<button class="btn btn-lg" id="video_button_productVisual" onclick="play4()">Video</button> -->
+				<button class="btn btn-lg" id="3rd_button" onclick="">Full View</button>
+			</div>
+			<h2>Product Visualization</h2>
+			<hr class="horizontal_line">
+			<p>360&deg; product visualizations are the most captivating way to showcase any product. These photorealistic renders feature every angle of an item with options to rotate the product and change patterns, colors, and textures.</p>
+			<div class="text-center">
+				<img src="images/new/pricing_option_section.png">
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+
+			$('.productrender7').ThreeSixty({
+					       totalFrames: 73, // Total no. of image you have for 360 slider
+					       endFrame: 73, // end frame for the auto spin animation
+					       currentFrame: 1, // This the start frame for auto spin
+					       imgList: '.threesixty_images', // selector for image list
+					       progress: '.spinner', // selector to show the loading progress
+					       imagePath: 'assets/marcinelica/', // path of the image assets
+					       filePrefix: '', // file prefix if any
+					       ext: '.jpg', // extention for the assets
+					       height: 450,
+					       width: 447,
+					       disableSpin: true
+					   });
+
+		});
+
+		$("#video_button_productVisual").click(function() {
+			$('#main_view_button_productVisual').removeClass('view-active');
+			$('#3rd_button').removeClass('view-active');
+			$('#video_button_productVisual').addClass('view-active');
+			$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeOut(1000, function() {
+				$(".hideLeftProductVisual, .hideMiddleProductVisual").hide();
+			});
+		});
+
+		$("#main_view_button_productVisual").click(function() {
+			$('#main_view_button_productVisual').addClass('view-active');
+			$('#3rd_button').removeClass('view-active');
+			$('#video_button_productVisual').removeClass('view-active');
+			if($(".hideMiddleProductVisual").hasClass("hidden")){
+				if($(".hideLeftProductVisual").hasClass("fullWidthLeftSection")){
+					$(".hideLeftProductVisual").removeClass("fullWidthLeftSection");
+					$(".hideMiddleProductVisual").removeClass('hidden').show();
+					$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
+				}
+			}else{
+				$(".hideLeftProductVisual, .hideMiddleProductVisual").fadeIn(1000);
+			}
+
+		});
+
+		$("#3rd_button").click(function() {
+
+			$('#main_view_button_productVisual').removeClass('view-active');
+			$('#video_button_productVisual').removeClass('view-active');
+			$('#3rd_button').addClass('view-active');
+
+			if($(".hideMiddleProductVisual").hasClass("hidden")){
+				$(".hideMiddleProductVisual").removeClass('hidden').show();
+				$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
+			}else{
+				$(".hideMiddleProductVisual").addClass('hidden').hide();
+				$(".hideLeftProductVisual").toggleClass("fullWidthLeftSection");
+				$(".hideLeftProductVisual, .hideMiddleProductVisual").show();
+
+			}
+		});
+
+		var myVideo4 = document.getElementById("product_visual_video");
+
+		function play4() {
+			if (myVideo4.paused)
+				myVideo4.play();
+		}
+
+		function pause4() {
+			if (myVideo4.play)
+				myVideo4.pause();
+		}
+
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+
+		function checkSlide(n)
+		{
+			switch(n)
+			{
+				case 0:
+				$('#product-visualization-info').attr("src", "images/elica_platinum_2016.png");
+				$('#product-visualization-elica-colors').show().attr("disabled", "disabled").off('click');
+				$('#product-visualization-fabric-colors').hide();
+				$('#product-visualization-shower-colors').hide();
+				$('#product-visualization-toaster-colors').hide();
+				$('#product-visualization-faucetb-colors').hide();
+				$('#product-visualization-fauceta-colors').hide();
+				break;
+				case 1:
+				$('#product-visualization-info').attr("src", "images/tuscan_highchair.png");
+				$('#product-visualization-fabric-colors').show();
+				$('#product-visualization-shower-colors').hide();
+				// $('#product-visualization-chair-colors').hide();
+				$('#product-visualization-toaster-colors').hide();
+				$('#product-visualization-faucetb-colors').hide();
+				$('#product-visualization-fauceta-colors').hide();
+				break;
+				case 2:
+				$('#product-visualization-info').attr("src", "images/tuscan_bathtub.png");
+				$('#product-visualization-shower-colors').show();
+				$('#product-visualization-fabric-colors').hide();
+				// $('#product-visualization-chair-colors').hide();
+				$('#product-visualization-toaster-colors').hide();
+				$('#product-visualization-faucetb-colors').hide();
+				$('#product-visualization-fauceta-colors').hide();
+				break;
+				// case 2:
+				// $('#product-visualization-info').attr("src", "images/luxury_office_chair.png");
+				// $('#product-visualization-shower-colors').hide();
+				// $('#product-visualization-fabric-colors').hide();
+				// $('#product-visualization-toaster-colors').hide();
+				// $('#product-visualization-faucetb-colors').hide();
+				// $('#product-visualization-fauceta-colors').hide();
+				// $('#product-visualization-chair-colors').show();
+				// break;
+				case 3:
+				$('#product-visualization-info').attr("src", "images/smeg_slice_toaster.png");
+				$('#product-visualization-shower-colors').hide();
+				$('#product-visualization-fabric-colors').hide();
+				// $('#product-visualization-chair-colors').hide();
+				$('#product-visualization-fauceta-colors').hide();
+				$('#product-visualization-faucetb-colors').hide();
+				$('#product-visualization-toaster-colors').show();
+				$("#product_visual_video").find("#video-src").attr("src","images/video/smeg_toaster.mp4");
+				$("#product_visual_video")[0].load();
+				// $("#product_visual_video").find("#video-src").attr("src","images/video/smeg_toaster.mp4");
+				// console.log('change vid here');
+				break;
+				case 4:
+				$('#product-visualization-info').attr("src", "images/single_handle_faucet_1.png");
+				$('#product-visualization-shower-colors').hide();
+				$('#product-visualization-fabric-colors').hide();
+				// $('#product-visualization-chair-colors').hide();
+				$('#product-visualization-toaster-colors').hide();
+				$('#product-visualization-fauceta-colors').hide();
+				$('#product-visualization-faucetb-colors').show();
+				$("#product_visual_video").find("#video-src").attr("src","images/video/brizo_solna.mp4");
+				$("#product_visual_video")[0].load();
+				break;
+				case 5:
+				$('#product-visualization-info').attr("src", "images/single_handle_faucet_2.png");
+				$('#product-visualization-shower-colors').hide();
+				$('#product-visualization-fabric-colors').hide();
+				// $('#product-visualization-chair-colors').hide();
+				$('#product-visualization-toaster-colors').hide();
+				$('#product-visualization-faucetb-colors').hide();
+				$('#product-visualization-fauceta-colors').show();
+				$("#product_visual_video").find("#video-src").attr("src","images/video/brizo_solna.mp4");
+				$("#product_visual_video")[0].load();
+				break;
+			}
+		}
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			if (n > x.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = x.length;}
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			x[slideIndex-1].style.display = "block";
+			checkSlide(slideIndex-1);
+			if(slideIndex-1 == 0){
+
+				$('.display-left').css({"background-color":"transparent"});
+				$('.display-right').css({"background-color":"transparent"});
+			}else{
+				$('.display-left').css({"background-color":"#F2F2F2"});
+				$('.display-right').css({"background-color":"#F2F2F2"});
+
+			}
+		}
+	</script>

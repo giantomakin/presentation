@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="presentationApp">
+<head>
+    <base href="{{baseURL}}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Presentation</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Assets CSS -->
+    <link href="bower_components/threesixty-slider/src/styles/threesixty.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-controller="mainController">
+
+	    <!-- Navigation -->
+    <nav class="custom-nav navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+            <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li>
+
+                        <a class="nav-a itemSelected" id="a4" href="#" ng-click="navigateSlide($event)">PRODUCT VISUALIZATION</a>
+                    </li>
+                    <li>
+
+                        <a class="nav-a" id="a5" href="#" ng-click="navigateSlide($event)">SIGNATURE ROOMS</a>
+                    </li>
+                    <li>
+
+                        <a class="nav-a" id="a6" href="#" ng-click="navigateSlide($event)">ADVERTISING SOLUTIONS</a>
+                    </li>
+                    <li>
+
+                        <a class="nav-a" id="a7" href="#" ng-click="navigateSlide($event)">PRICING PACKAGES</a>
+                    </li>
+                    <li>
+
+                        <a class="nav-a" id="a8" href="#" ng-click="navigateSlide($event)">PRODUCT PLACEMENT</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+	<div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+	  <!-- Indicators -->
+	  <!-- Wrapper for slides -->
+	 <div class="row">
+
+	 		<div class="col-md-6"><p class="slide-title "><span style="font-size:20px !important; color:#e46e2d;" class="glyphicon glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span id="page-title"> STATIC PICTURE</span></p></div>
+
+	 		<div class="col-md-6"><img src="images/new/logo.png" class="pull-right" width="150" height="150">
+    </div>
+
+
+	 </div>
+	  <div class="carousel-inner" role="listbox">
+
+	    <div class="item" data-page-name="product visualization" data-target-id="a4">
+	        <div class="carousel-caption" ng-include="'pages/elica-visualization.html'"></div>
+	    </div>
+	    <div class="item" data-page-name="signature rooms" data-target-id="a5">
+	        <div class="carousel-caption" ng-include="'pages/virtual-room.html'"></div>
+	    </div>
+	    <div class="item" data-page-name="advertising solutions" data-target-id="a6">
+	        <div class="carousel-caption" ng-include="'pages/partnered-content.html'"></div>
+	    </div>
+		<div class="item" data-page-name="pricing" data-target-id="a7">
+		    <div class="carousel-caption" ng-include="'pages/pricing.html'"></div>
+		</div>
+		<div class="item" data-page-name="product placement" data-target-id="a8">
+		    <div class="carousel-caption" ng-include="'pages/product-placement.html'"></div>
+		</div>
+
+	  </div>
+
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+
+
+    <!-- jQuery -->
+    <script src="bower_components/jQuery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- AngularJS Core JavaScript -->
+    <script src="bower_components/angular/angular.min.js"></script>
+
+    <script src="bower_components/threesixty-slider/dist/threesixty.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
