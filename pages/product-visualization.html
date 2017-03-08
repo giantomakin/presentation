@@ -125,7 +125,7 @@
 
 				<img id="product-visualization-info" src="images/tuscan_highchair.png">
 
-				<p>Available Colors</p>
+				<p class="available_colors">Available Colors</p>
 				<ul class="availableColorsList" id="product-visualization-fabric-colors">
 					<li><a href="#" style="background-color: #2f3349;" data-color="5" ng-click="pickPallete($event)">&nbsp;</a></li>
 					<li><a href="#" class="active" style="background-color: #eae9e5;" data-color="6" ng-click="pickPallete($event)">&nbsp;</a></li>
@@ -367,6 +367,7 @@ function checkSlide(n)
 	switch(n)
 	{
 		case 0:
+		$('#product-visualization-info').attr("src", "images/elica_platinum_2016.png");
 		$('#product-visualization-elica-colors').show().attr("disabled", "disabled").off('click');
 		$('#product-visualization-fabric-colors').hide();
 		$('#product-visualization-shower-colors').hide();
